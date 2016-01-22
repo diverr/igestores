@@ -179,6 +179,7 @@ angular.module('ui.calendar', [])
                     return r;
                 };
                 var dtf = $locale.DATETIME_FORMATS;
+                console.log($locale);
                 return {
                     monthNames: tValues(dtf.MONTH),
                     monthNamesShort: tValues(dtf.SHORTMONTH),
