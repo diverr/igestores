@@ -1,7 +1,3 @@
-/**
- * INSPINIA - Responsive Admin Theme
- *
- */
 (function () {
     angular.module('inspinia', [
         'ui.router',                    // Routing
@@ -13,5 +9,3 @@
         'ui.footable'
     ])
 })();
-
-// Other libraries are loaded dynamically in the config.js file using the library ocLazyLoad

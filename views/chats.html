@@ -1,0 +1,118 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Conversaciones</h2>
+
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a>Conversaciones</a>
+            </li>
+            <li class="active">
+                <strong>Conversaciones recientes</strong>
+            </li>
+        </ol>
+        
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="ChatsCtrl">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <span class="text-muted small pull-right">  </span>
+                    <h2>Conversaciones</h2>
+                    
+
+                    <div class="input-group">
+                    <input type="text" placeholder="Buscar conversación" class="input form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn btn-success"> <i class="fa fa-search"></i> Buscar</button>
+                        </span>
+                    </div>
+
+
+                    
+                    <div class="clients-list">
+
+
+                        <div class="full-height-scroll" full-scroll>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover footable" data-page-size="5">
+
+
+
+
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 40px;" data-sort-ignore="true"></th>
+                                            <th style="width: 40px;" data-sort-ignore="true"></th>
+                                            <th >Cliente</th>
+                                            <th data-sort-initial="descending" style="width: 150px;" >Fecha</th>
+                                            <th style="width: 150px;" >Hora</th>
+                                            <th style="width: 100px;" >Mensajes</th>
+                                            <th style="width: 100px;" >Destacado</th>
+                                            <th data-sort-ignore="true"></th>
+                                        </tr>
+                                    </thead>
+
+
+
+
+                                    <tbody>
+
+
+                                        <tr ng-repeat="chat in chats">
+                                            <td><input type="checkbox"></td>
+                                            <td class="client-avatar"><img alt="image" src="{{chat.photo}}"> </td>
+                                            <td><a class="client-link">{{chat.name}} {{chat.lastName}}</a><br/><small>{{chat.lastMessage}}</small></td>
+                                            <td>{{chat.date}}</td>
+                                            <td>{{chat.time}}</td>
+                                            <td align="center">
+                                                <span ng-if="chat.messagesUnread > 0"><i class="fa fa-envelope"></i> {{chat.messagesUnread}}</span>
+                                                <span ng-if="chat.messagesUnread < 1"><i class="fa fa-envelope-o"></i></span>
+                                            </td>
+                                            <td align="center">
+                                                <span ng-if="chat.star > 0"><i class="fa fa-star"></i></span>
+                                                <span ng-if="chat.star < 1"><i class="fa fa-star-o"></i></span>
+                                            </td>
+                                            <td>
+
+                                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-edit"></i> Editar</button>
+                                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-tasks"></i> Archivar</button>
+                                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-trash-o"></i> Borrar</button>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                    <tfoot class="hide-if-no-paging">
+                                        <tr>
+                                            <td colspan="8" align="center">
+                                              <ul class="pagination"></ul>
+                                          </td>
+                                      </tr>
+                                  </tfoot>
+
+
+                              </table>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+  </div>
+</div>
+
