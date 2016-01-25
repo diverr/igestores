@@ -33,20 +33,20 @@
 
                         <div class="full-height-scroll" full-scroll>
                             <div class="table-responsive">
-                                <table class="table table-striped table-hover footable">
+                                <table class="table table-striped table-hover footable" data-page-size="5">
 
 
 
 
                                     <thead>
                                         <tr>
-                                            <th style="width: 40px;"></th>
-                                            <th style="width: 40px;"></th>
-                                            <th class="footable-visible footable-sortable">Cliente<span class="footable-sort-indicator"></span></th>
-                                            <th style="width: 150px;" class="footable-visible footable-sortable">Fecha<span class="footable-sort-indicator"></span></th>
-                                            <th style="width: 150px;" class="footable-visible footable-sortable">Hora<span class="footable-sort-indicator"></span></th>
-                                            <th style="width: 200px;" class="footable-visible footable-sortable">Contacto<span class="footable-sort-indicator"></span></th>
-                                            <th></th>
+                                            <th style="width: 40px;" data-sort-ignore="true"></th>
+                                            <th style="width: 40px;" data-sort-ignore="true"></th>
+                                            <th data-sort-initial="true">Cliente</th>
+                                            <th style="width: 150px;" >Fecha</th>
+                                            <th style="width: 150px;" >Hora</th>
+                                            <th style="width: 200px;" >Contacto</th>
+                                            <th data-sort-ignore="true"></th>
                                         </tr>
                                     </thead>
 
@@ -73,18 +73,28 @@
                                         </tr>
 
                                     </tbody>
-                                </table>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        
+                                    <tfoot class="hide-if-no-paging">
+                                        <tr>
+                                            <td colspan="8" align="center">
+                                              <ul class="pagination"></ul>
+                                          </td>
+                                      </tr>
+                                  </tfoot>
 
 
-    </div>
+                              </table>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+  </div>
 </div>
