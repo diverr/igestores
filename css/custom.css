@@ -1,0 +1,25 @@
+/* Custom styles override */
+
+body {
+    background-color: #153f6f;
+}
+
+.navbar-fixed-top, .navbar-static-top {
+    background: #1e2633;
+}
+
+.nav-header {
+    background: none;
+}
+
+
+/* Logo */
+.logo-container {
+    text-align: center;
+}
+
+.logo-column {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}

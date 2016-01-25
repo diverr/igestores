@@ -1650,7 +1650,6 @@ function wizardCtrl($scope, $rootScope) {
  * Store data events for calendar
  */
 function CalendarCtrl($scope) {
-
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -1699,6 +1698,10 @@ function CalendarCtrl($scope) {
 
     /* Event sources array */
     $scope.eventSources = [$scope.events];
+}
+
+function ClientsCtrl($scope, Clients) {
+    $scope.clients = Clients.getAll();
 }
 
 /**
@@ -3357,6 +3360,7 @@ angular
     .controller('ionSlider', ionSlider)
     .controller('wizardCtrl', wizardCtrl)
     .controller('CalendarCtrl', CalendarCtrl)
+    .controller('ClientsCtrl', ClientsCtrl)
     .controller('chartJsCtrl', chartJsCtrl)
     .controller('GoogleMaps', GoogleMaps)
     .controller('ngGridCtrl', ngGridCtrl)
