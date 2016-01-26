@@ -311,7 +311,11 @@ function CalendarCtrl($scope) {
 }
 
 function MeetingsCtrl($scope, $timeout, Meetings) {
-    $scope.items = Meetings.getAll();
+    $scope.items = [];
+
+    Meetings.getAll().then(function(data) {
+        $scope.items = data;
+    });
 
     $timeout(function(){
         $('.table').trigger('footable_redraw');
