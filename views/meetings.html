@@ -19,7 +19,7 @@
 
     </div>
 </div>
-<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="ClientsCtrl">
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="MeetingsCtrl">
     <div class="row">
         <div class="col-sm-12">
             <div class="ibox">
@@ -56,13 +56,13 @@
                                     <tbody>
 
 
-                                        <tr ng-repeat="client in clients">
+                                        <tr ng-repeat="item in items">
                                             <td><input type="checkbox"></td>
-                                            <td class="client-avatar"><img alt="image" src="{{client.photo}}"> </td>
-                                            <td><a class="client-link">{{client.name}} {{client.lastName}}</a><br/><small>{{client.comments}}</small></td>
-                                            <td>{{client.date}}</td>
-                                            <td>{{client.time}}</td>
-                                            <td>{{client.contact}}</td>
+                                            <td class="client-avatar"><img alt="image" src="{{item.photo}}"> </td>
+                                            <td><a class="client-link">{{item.name}} {{item.lastName}}</a><br/><small>{{item.comments}}</small></td>
+                                            <td>{{item.date}}</td>
+                                            <td>{{item.time}}</td>
+                                            <td>{{item.contact}}</td>
                                             <td>
 
                                                 <button type="button" class="btn btn-w-m btn-success"><i class="fa fa-check"></i> Asignar cita</button>

@@ -310,8 +310,8 @@ function CalendarCtrl($scope) {
     $scope.eventSources = [$scope.events];
 }
 
-function ClientsCtrl($scope, $timeout, Clients) {
-    $scope.clients = Clients.getAll();
+function MeetingsCtrl($scope, $timeout, Meetings) {
+    $scope.items = Meetings.getAll();
 
     $timeout(function(){
         $('.table').trigger('footable_redraw');
@@ -319,8 +319,8 @@ function ClientsCtrl($scope, $timeout, Clients) {
 }
 
 function ChatsCtrl($scope, $timeout, Chats) {
-    $scope.chats = Chats.getAll();
-    console.log($scope.chats);
+    $scope.items = Chats.getAll();
+    
 
     $timeout(function(){
         $('.table').trigger('footable_redraw');
@@ -331,6 +331,6 @@ angular
     .module('inspinia')
     .controller('MainCtrl', MainCtrl)
     .controller('CalendarCtrl', CalendarCtrl)
-    .controller('ClientsCtrl', ClientsCtrl)
+    .controller('MeetingsCtrl', MeetingsCtrl)
     .controller('ChatsCtrl', ChatsCtrl);
 

@@ -37,10 +37,15 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('app.clients', {
-            url: "/clients",
-            templateUrl: "views/clients.html",
-            data: { pageTitle: 'Clients' }
+        .state('app.meetings', {
+            url: "/meetings",
+            templateUrl: "views/meetings.html",
+            data: { pageTitle: 'Citas' }
+        })
+        .state('app.new-meeting', {
+            url: "/new-meeting",
+            templateUrl: "views/meetings_new.html",
+            data: { pageTitle: 'Citas' }
         })
         .state('app.chats', {
             url: "/chats",

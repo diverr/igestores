@@ -66,19 +66,19 @@
                                     <tbody>
 
 
-                                        <tr ng-repeat="chat in chats">
+                                        <tr ng-repeat="item in items">
                                             <td><input type="checkbox"></td>
-                                            <td class="client-avatar"><img alt="image" src="{{chat.photo}}"> </td>
-                                            <td><a class="client-link">{{chat.name}} {{chat.lastName}}</a><br/><small>{{chat.lastMessage}}</small></td>
-                                            <td>{{chat.date}}</td>
-                                            <td>{{chat.time}}</td>
+                                            <td class="client-avatar"><img alt="image" src="{{item.photo}}"> </td>
+                                            <td><a class="client-link">{{item.name}} {{item.lastName}}</a><br/><small>{{item.lastMessage}}</small></td>
+                                            <td>{{item.date}}</td>
+                                            <td>{{item.time}}</td>
                                             <td align="center">
-                                                <span ng-if="chat.messagesUnread > 0"><i class="fa fa-envelope"></i> {{chat.messagesUnread}}</span>
-                                                <span ng-if="chat.messagesUnread < 1"><i class="fa fa-envelope-o"></i></span>
+                                                <span ng-if="item.messagesUnread > 0"><i class="fa fa-envelope"></i> {{item.messagesUnread}}</span>
+                                                <span ng-if="item.messagesUnread < 1"><i class="fa fa-envelope-o"></i></span>
                                             </td>
                                             <td align="center">
-                                                <span ng-if="chat.star > 0"><i class="fa fa-star"></i></span>
-                                                <span ng-if="chat.star < 1"><i class="fa fa-star-o"></i></span>
+                                                <span ng-if="item.star > 0"><i class="fa fa-star"></i></span>
+                                                <span ng-if="item.star < 1"><i class="fa fa-star-o"></i></span>
                                             </td>
                                             <td>
 

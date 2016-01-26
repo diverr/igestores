@@ -1,9 +1,9 @@
 angular.module('inspinia')
-.service('Clients', serviceClients)
+.service('Meetings', serviceMeetings)
 .service('Chats', serviceChats);
 
 
-function serviceClients() {
+function serviceMeetings() {
     var items = [
         {
             id: 100,
