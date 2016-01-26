@@ -19,7 +19,7 @@
 
     </div>
 </div>
-<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="MeetingsCtrl">
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="MeetingsCtrl as vm">
     <div class="row">
         <div class="col-sm-12">
             <div class="ibox">
@@ -56,7 +56,7 @@
                                     <tbody>
 
 
-                                        <tr ng-repeat="item in items">
+                                        <tr ng-repeat="item in vm.items">
                                             <td><input type="checkbox"></td>
                                             <td class="client-avatar"><img alt="image" src="{{item.photo}}"> </td>
                                             <td><a class="client-link">{{item.name}} {{item.lastName}}</a><br/><small>{{item.comments}}</small></td>

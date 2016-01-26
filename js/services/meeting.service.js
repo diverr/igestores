@@ -1,17 +1,25 @@
 angular.module('inspinia')
 .service('Meetings', serviceMeetings);
 
-function serviceMeetings($http, $q) {
-    var deferred = $q.defer(); 
-    var items = [];
+function serviceMeetings($http) {
+    var items = null;
     
-    $http.get('/js/data/clients.json').success(function (data) {
-        deferred.resolve(data);
-    });
+    var getData = function(success) {
+        if(items != null) {
+            success(items);
+            return;
+        }
+        $http.get('/js/data/meetings.json').success(function (data) {
+            items = data;
+            success(data);
+        });
+    };
 
     return {
-        getAll: function() {
-            return deferred.promise;
+        getAll: function(success) {
+            getData(function(data) {
+                success(data);
+            });
         }
     };
 }

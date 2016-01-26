@@ -311,10 +311,11 @@ function CalendarCtrl($scope) {
 }
 
 function MeetingsCtrl($scope, $timeout, Meetings) {
-    $scope.items = [];
+    var vm = this;
+    vm.items = [];
 
-    Meetings.getAll().then(function(data) {
-        $scope.items = data;
+    Meetings.getAll(function(data) {
+        vm.items = data;
     });
 
     $timeout(function(){
@@ -323,9 +324,13 @@ function MeetingsCtrl($scope, $timeout, Meetings) {
 }
 
 function ChatsCtrl($scope, $timeout, Chats) {
-    $scope.items = Chats.getAll();
+    var vm = this;
+    vm.items = [];
     
-
+    Chats.getAll(function(data) {
+        vm.items = data;
+    });
+    
     $timeout(function(){
         $('.table').trigger('footable_redraw');
     }, 100);
