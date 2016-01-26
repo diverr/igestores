@@ -33,8 +33,12 @@
                 <a ui-sref="app.calendar"><i class="fa fa-table"></i> <span class="nav-label">Calendario</span> </a>
             </li>
 
-            <li ui-sref-active="active">
-                <a ui-sref="app.meetings"><i class="fa fa-edit"></i> <span class="nav-label">Citas</span> </a>
+            <li ng-class="{active: $state.includes('meetings')}">
+                <a ui-sref="meetings.index"><i class="fa fa-edit"></i> <span class="nav-label">Citas</span> </a>
+                <ul class="nav nav-second-level" ng-class="{in: $state.includes('meetings')}">
+                    <li ui-sref-active="active"><a ui-sref="meetings.index">Listado de citas</a></li>
+                    <li ui-sref-active="active"><a ui-sref="meetings.new">Crear cita</a></li>
+                </ul>
             </li>
 
             <li ui-sref-active="active">

@@ -1,4 +1,7 @@
 'use strict';
+
+moment.locale('es');
+
 (function(angular){
     /* global moment */
     var Module = angular.module('datePicker', []);
@@ -21,7 +24,7 @@
             minutes: ['minutes', 'isSameMinutes'],
         },
         step: 5,
-        firstDay: 0 //Sunday is the first day by default.
+        firstDay: 1 //Sunday is the first day by default.
     });
 
 //Moment format filter.

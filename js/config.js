@@ -37,21 +37,29 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('app.meetings', {
-            url: "/meetings",
-            templateUrl: "views/meetings.html",
-            data: { pageTitle: 'Citas' }
-        })
-        .state('app.new-meeting', {
-            url: "/new-meeting",
-            templateUrl: "views/meetings_new.html",
-            data: { pageTitle: 'Citas' }
-        })
+        
         .state('app.chats', {
             url: "/chats",
             templateUrl: "views/chats.html",
             data: { pageTitle: 'Chats' }
         })
+
+        .state('meetings', {
+            abstract: true,
+            url: "/meetings",
+            templateUrl: "views/common/content.html",
+        })
+        .state('meetings.index', {
+            url: "/index",
+            templateUrl: "views/meetings.html",
+            data: { pageTitle: 'Citas' }
+        })
+        .state('meetings.new', {
+            url: "/new",
+            templateUrl: "views/meetings_new.html",
+            data: { pageTitle: 'Citas' }
+        })
+
         .state('login', {
             url: "/login",
             templateUrl: "views/login.html",
