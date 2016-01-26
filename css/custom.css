@@ -23,3 +23,10 @@ body {
     margin-top: 50px;
     margin-bottom: 40px;
 }
+
+/* CALENDARIO */
+
+.fc-event, .fc-agenda .fc-event-time, .fc-event a {
+    background-color: #153F6F;
+    border-color: #153F6F;
+}
