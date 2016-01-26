@@ -7,6 +7,7 @@
         'ngIdle',                       // Idle timer
         'ngSanitize',                   // ngSanitize
         'ui.footable',
-        'datePicker'
+        'datePicker',
+        'localytics.directives'
     ])
 })();
