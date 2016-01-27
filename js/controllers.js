@@ -316,11 +316,13 @@ function MeetingsCtrl($scope, $timeout, Meetings) {
 
     Meetings.getAll(function(data) {
         vm.items = data;
+
+        $timeout(function(){
+            $('.table').trigger('footable_redraw');
+        }, 100);
     });
 
-    $timeout(function(){
-        $('.table').trigger('footable_redraw');
-    }, 100);
+    
 }
 
 function ChatsCtrl($scope, $timeout, Chats) {
@@ -329,11 +331,13 @@ function ChatsCtrl($scope, $timeout, Chats) {
     
     Chats.getAll(function(data) {
         vm.items = data;
+
+        $timeout(function(){
+            $('.table').trigger('footable_redraw');
+        }, 100);
     });
     
-    $timeout(function(){
-        $('.table').trigger('footable_redraw');
-    }, 100);
+    
 }
 
 angular

@@ -4,21 +4,21 @@ angular.module('inspinia')
 function serviceMeetings($http) {
     var items = null;
     
-    var getData = function(success) {
+    var getData = function(callback) {
         if(items != null) {
-            success(items);
+            callback(items);
             return;
         }
         $http.get('/js/data/meetings.json').success(function (data) {
             items = data;
-            success(data);
+            callback(data);
         });
     };
 
     return {
-        getAll: function(success) {
+        getAll: function(callback) {
             getData(function(data) {
-                success(data);
+                callback(data);
             });
         }
     };
