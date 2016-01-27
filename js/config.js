@@ -21,7 +21,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('app.calendar', {
             url: "/calendar",
             templateUrl: "views/calendar.html",
-            data: { pageTitle: 'Calendar' },
+            data: { pageTitle: 'Calendario de Citas' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -70,16 +70,6 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/forgot_password.html",
             data: { pageTitle: 'Forgot password', specialClass: 'gray-bg' }
         })
-        .state('miscellaneous', {
-            abstract: true,
-            url: "/miscellaneous",
-            templateUrl: "views/common/content.html",
-        })
-        .state('miscellaneous.chat_view', {
-            url: "/chat_view",
-            templateUrl: "views/chat_view.html",
-            data: { pageTitle: 'Chat view' }
-        });
 
 }
 angular
