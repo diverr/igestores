@@ -1,6 +1,18 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Chats</h2>
+        <h2>Conversaciones</h2>
+
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a>Conversaciones</a>
+            </li>
+            <li class="active">
+                <strong>Conversaciones recientes</strong>
+            </li>
+        </ol>
         
     </div>
     <div class="col-lg-2">
@@ -12,9 +24,25 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="text-muted small pull-right">  </span>
+                    <h2>Conversando con: Carles Fernández</h2>
+                </div>
+
                 <div class="ibox-content">
 
-                    <strong>Mensajes de aviso </strong> área reservada para cualquier tipo de notificación instantánea.
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-6">
+                            <div class="input-group">
+                                <input type="text" placeholder="Buscar" class="input form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn btn-success"> <i class="fa fa-search"></i> Buscar</button>
+                                </span>
+                            </div>        
+                        </div>
+                    </div>
+
+                    
 
                 </div>
             </div>
@@ -25,10 +53,7 @@
 
             <div class="ibox chat-view">
 
-                <div class="ibox-title">
-                    <small class="pull-right text-muted">Último mensaje:  Lun Ene 26 2015 - 18:39:23</small>
-                    Panel de chats
-                </div>
+
 
                 <div class="ibox-content">
 
@@ -37,140 +62,93 @@
                         <div class="col-md-9 ">
                             <div class="chat-discussion">
 
+
+                                <messages-list></messages-list>
+                                
+
                                 <div class="chat-message left">
                                     <img class="message-avatar" src="img/a1.jpg" alt="" >
                                     <div class="message">
                                         <a class="message-author" href="#"> Michael Smith </a>
                                         <span class="message-date"> Mon Jan 26 2015 - 18:39:23 </span>
-                                            <span class="message-content">
-											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                                            </span>
-                                    </div>
-                                </div>
-                                <div class="chat-message right">
-                                    <img class="message-avatar" src="img/a4.jpg" alt="" >
-                                    <div class="message">
-                                        <a class="message-author" href="#"> Karl Jordan </a>
-                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                            <span class="message-content">
-											Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
-                                            </span>
-                                    </div>
-                                </div>
-                                <div class="chat-message left">
-                                    <img class="message-avatar" src="img/a2.jpg" alt="" >
-                                    <div class="message">
-                                        <a class="message-author" href="#"> Michael Smith </a>
-                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                            <span class="message-content">
-											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
-                                            </span>
-                                    </div>
-                                </div>
-                                <div class="chat-message right">
-                                    <img class="message-avatar" src="img/a5.jpg" alt="" >
-                                    <div class="message">
-                                        <a class="message-author" href="#"> Alice Jordan </a>
-                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                            <span class="message-content">
-											All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-                                                It uses a dictionary of over 200 Latin words.
-                                            </span>
-                                    </div>
-                                </div>
-                                <div class="chat-message left">
-                                    <img class="message-avatar" src="img/a6.jpg" alt="" >
-                                    <div class="message">
-                                        <a class="message-author" href="#"> Mark Smith </a>
-                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
-                                            <span class="message-content">
-											All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-                                                It uses a dictionary of over 200 Latin words.
-                                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="chat-users">
+                                        <span class="message-content">
+                                           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                   </div>
+                               </div>
+                               <div class="chat-message right">
+                                <img class="message-avatar" src="img/a4.jpg" alt="" >
+                                <div class="message">
+                                    <a class="message-author" href="#"> Karl Jordan </a>
+                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                    <span class="message-content">
+                                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+                                   </span>
+                               </div>
+                           </div>
+                           <div class="chat-message left">
+                            <img class="message-avatar" src="img/a2.jpg" alt="" >
+                            <div class="message">
+                                <a class="message-author" href="#"> Michael Smith </a>
+                                <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                <span class="message-content">
+                                   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                               </span>
+                           </div>
+                       </div>
+                       <div class="chat-message right">
+                        <img class="message-avatar" src="img/a5.jpg" alt="" >
+                        <div class="message">
+                            <a class="message-author" href="#"> Alice Jordan </a>
+                            <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                            <span class="message-content">
+                               All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                               It uses a dictionary of over 200 Latin words.
+                           </span>
+                       </div>
+                   </div>
+                   <div class="chat-message left">
+                    <img class="message-avatar" src="img/a6.jpg" alt="" >
+                    <div class="message">
+                        <a class="message-author" href="#"> Mark Smith </a>
+                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                        <span class="message-content">
+                           All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                           It uses a dictionary of over 200 Latin words.
+                       </span>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-3">
+        <div class="chat-users">
 
-                                <div class="users-list">
-                                    <div class="chat-user">
-                                        <img class="chat-avatar" src="img/a4.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Karl Jordan</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <img class="chat-avatar" src="img/a1.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Monica Smith</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <span class="pull-right label label-primary">Online</span>
-                                        <img class="chat-avatar" src="img/a2.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Michael Smith</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <span class="pull-right label label-primary">Online</span>
-                                        <img class="chat-avatar" src="img/a3.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Janet Smith</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <img class="chat-avatar" src="img/a5.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Alice Smith</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <img class="chat-avatar" src="img/a6.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Monica Cale</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <img class="chat-avatar" src="img/a2.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Mark Jordan</a>
-                                        </div>
-                                    </div>
-                                    <div class="chat-user">
-                                        <span class="pull-right label label-primary">Online</span>
-                                        <img class="chat-avatar" src="img/a3.jpg" alt="" >
-                                        <div class="chat-user-name">
-                                            <a href="#">Janet Smith</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <managers-list></managers-list>
 
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="chat-message-form">
-
-                                <div class="form-group">
-
-                                    <textarea class="form-control message-input" name="message" placeholder="Escribe aquí tu mensaje"></textarea>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
         </div>
-
     </div>
+
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="chat-message-form">
+
+            <div class="form-group">
+
+                <textarea class="form-control message-input" name="message" placeholder="Escribe aquí tu mensaje"></textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
 
 
 </div>
@@ -191,64 +169,64 @@
                 Monica Jackson <small class="chat-date">
                 10:02 am
             </small>
-            </div>
-            <div class="chat-message active">
-                Lorem Ipsum is simply dummy text input.
-            </div>
-
         </div>
-        <div class="right">
-            <div class="author-name">
-                Mick Smith
-                <small class="chat-date">
-                    11:24 am
-                </small>
-            </div>
-            <div class="chat-message">
-                Lorem Ipsum is simpl.
-            </div>
+        <div class="chat-message active">
+            Lorem Ipsum is simply dummy text input.
         </div>
-        <div class="left">
-            <div class="author-name">
-                Alice Novak
-                <small class="chat-date">
-                    08:45 pm
-                </small>
-            </div>
-            <div class="chat-message active">
-                Check this stock char.
-            </div>
-        </div>
-        <div class="right">
-            <div class="author-name">
-                Anna Lamson
-                <small class="chat-date">
-                    11:24 am
-                </small>
-            </div>
-            <div class="chat-message">
-                The standard chunk of Lorem Ipsum
-            </div>
-        </div>
-        <div class="left">
-            <div class="author-name">
-                Mick Lane
-                <small class="chat-date">
-                    08:45 pm
-                </small>
-            </div>
-            <div class="chat-message active">
-                I belive that. Lorem Ipsum is simply dummy text.
-            </div>
-        </div>
-
 
     </div>
-    <div class="form-chat">
-        <div class="input-group input-group-sm"><input type="text" class="form-control"> <span class="input-group-btn"> <button
-                class="btn btn-primary" type="button">Enviar
-        </button> </span></div>
+    <div class="right">
+        <div class="author-name">
+            Mick Smith
+            <small class="chat-date">
+                11:24 am
+            </small>
+        </div>
+        <div class="chat-message">
+            Lorem Ipsum is simpl.
+        </div>
     </div>
+    <div class="left">
+        <div class="author-name">
+            Alice Novak
+            <small class="chat-date">
+                08:45 pm
+            </small>
+        </div>
+        <div class="chat-message active">
+            Check this stock char.
+        </div>
+    </div>
+    <div class="right">
+        <div class="author-name">
+            Anna Lamson
+            <small class="chat-date">
+                11:24 am
+            </small>
+        </div>
+        <div class="chat-message">
+            The standard chunk of Lorem Ipsum
+        </div>
+    </div>
+    <div class="left">
+        <div class="author-name">
+            Mick Lane
+            <small class="chat-date">
+                08:45 pm
+            </small>
+        </div>
+        <div class="chat-message active">
+            I belive that. Lorem Ipsum is simply dummy text.
+        </div>
+    </div>
+
+
+</div>
+<div class="form-chat">
+    <div class="input-group input-group-sm"><input type="text" class="form-control"> <span class="input-group-btn"> <button
+        class="btn btn-primary" type="button">Enviar
+    </button> </span></div>
+</div>
 
 </div>
 <div id="small-chat" ng-click="openChat = !openChat">

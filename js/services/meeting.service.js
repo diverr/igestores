@@ -1,24 +1,35 @@
 angular.module('inspinia')
 .service('Meetings', serviceMeetings);
 
-function serviceMeetings($http) {
-    var items = null;
+function serviceMeetings($http, $q, Data, Clients) {
     
-    var getData = function(callback) {
-        if(items != null) {
-            callback(items);
-            return;
-        }
-        $http.get('/js/data/meetings.json').success(function (data) {
-            items = data;
-            callback(data);
-        });
-    };
-
     return {
         getAll: function(callback) {
-            getData(function(data) {
-                callback(data);
+            var result = [];
+
+            Data.getAll('meetings', function(data) {
+                var meetings = data;
+                var requests = [];
+
+                // recorremos las citas para asociar el cliente
+                angular.forEach(meetings, function(meeting) {
+                    var deferred = $q.defer();
+                    requests.push(deferred.promise);
+
+                    // le asociamos el cliente
+                    Clients.get(meeting.client_id, function(client) {
+                        
+                        meeting.client = client;
+                        result.push(meeting);
+                        deferred.resolve();
+
+                    });
+                });
+
+                // cuando hay terminado todas las llamadas asíncronas ejecutamos el callback
+                $q.all(requests).then(function() {
+                    callback(result);    
+                });
             });
         }
     };

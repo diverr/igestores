@@ -1,0 +1,56 @@
+[{
+    "id": 100,
+    "photo": "/img/a1.jpg",
+    "name": "Carles",
+    "lastName": "Fernández",
+    "contact": "+376 600 123 000"
+},
+{
+    "id": 101,
+    "photo": "/img/a2.jpg",
+    "name": "Jordi",
+    "lastName": "García",
+    "contact": "jgarcia74@hotmail.com"
+},
+{
+    "id": 102,
+    "photo": "/img/a3.jpg",
+    "name": "Marta",
+    "lastName": "Forcadell",
+    "contact": "mlopez_s@hotmail.com"
+},
+{
+    "id": 103,
+    "photo": "/img/a4.jpg",
+    "name": "Federico",
+    "lastName": "Trillo",
+    "contact": "+376 600 123 000"
+},
+{
+    "id": 104,
+    "photo": "/img/a5.jpg",
+    "name": "Juan",
+    "lastName": "García",
+    "contact": "+376 660 822 143"
+},
+{
+    "id": 105,
+    "photo": "/img/a6.jpg",
+    "name": "Mónica",
+    "lastName": "Carpintero",
+    "contact": "+376 600 123 000"
+},
+{
+    "id": 106,
+    "photo": "/img/a7.jpg",
+    "name": "Gabriel",
+    "lastName": "Ruiz",
+    "contact": "jgarcia74@hotmail.com"
+},
+{
+    "id": 107,
+    "photo": "/img/a8.jpg",
+    "name": "Lucio",
+    "lastName": "Camacho",
+    "contact": "mlopez_s@hotmail.com"
+}]

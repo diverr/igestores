@@ -336,8 +336,6 @@ function ChatsCtrl($scope, $timeout, Chats) {
             $('.table').trigger('footable_redraw');
         }, 100);
     });
-    
-    
 }
 
 angular

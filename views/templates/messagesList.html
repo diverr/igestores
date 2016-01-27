@@ -1,0 +1,15 @@
+<div class="chat-message left" ng-repeat="item in vm.chat.messages">
+    <img ng-if="item.is_manager" class="message-avatar" src="{{vm.chat.manager.photo}}" alt="" >
+    <img ng-if="!item.is_manager" class="message-avatar" src="{{vm.chat.client.photo}}" alt="" >
+
+    <div class="message">
+        
+        <a class="message-author" href="#" ng-if="item.is_manager"> {{vm.chat.manager.name}} </a>
+        <a class="message-author" href="#" ng-if="!item.is_manager"> {{vm.chat.client.name}} {{vm.chat.client.lastName}}</a>
+
+        <span class="message-date"> {{item.date}} </span>
+        <span class="message-content">
+         {{item.message}}
+        </span>
+    </div>
+</div>

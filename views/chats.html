@@ -68,8 +68,8 @@
 
                                         <tr ng-repeat="item in vm.items">
                                             <td><input type="checkbox"></td>
-                                            <td class="client-avatar"><img alt="image" src="{{item.photo}}"> </td>
-                                            <td><a class="client-link">{{item.name}} {{item.lastName}}</a><br/><small>{{item.lastMessage}}</small></td>
+                                            <td class="client-avatar"><img alt="image" src="{{item.client.photo}}"> </td>
+                                            <td><a class="client-link">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.lastMessage}}</small></td>
                                             <td>{{item.date}}</td>
                                             <td>{{item.time}}</td>
                                             <td align="center">

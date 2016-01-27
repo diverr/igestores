@@ -1,30 +1,37 @@
 [{
     "id": 100,
-    "photo": "/img/a1.jpg",
-    "name": "Carles",
-    "lastName": "Fernández",
+    "client_id": 101,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "10/03/2016",
-    "time": "12:00 - 14:00",
+    "time": "09:",
     "messagesUnread": "2",
     "star": "1"
 },
 {
     "id": 101,
-    "photo": "/img/a2.jpg",
-    "name": "Marta",
-    "lastName": "Forcadell",
+    "client_id": 101,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
-    "date": "11/03/2016",
-    "time": "09:00 - 11:00",
-    "messagesUnread": "3",
+    "date": "18/03/2016",
+    "time": "15:00 - 16:30",
+    "messagesUnread": "1",
     "star": "0"
 },
 {
     "id": 102,
-    "photo": "/img/a3.jpg",
-    "name": "Jordi",
-    "lastName": "García",
+    "client_id": 102,
+    "manager_id": 100,
+    "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
+    "date": "11/03/2016",
+    "time": "09:00",
+    "messagesUnread": "3",
+    "star": "0"
+},
+{
+    "id": 103,
+    "client_id": 103,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "18/03/2016",
     "time": "15:00 - 16:30",
@@ -32,10 +39,9 @@
     "star": "0"
 },
 {
-    "id": 103,
-    "photo": "/img/a4.jpg",
-    "name": "María",
-    "lastName": "López",
+    "id": 104,
+    "client_id": 104,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "19/03/2016",
     "time": "10:00 - 11:30",
@@ -43,10 +49,9 @@
     "star": "1"
 },
 {
-    "id": 104,
-    "photo": "/img/a5.jpg",
-    "name": "Marta",
-    "lastName": "Forcadell",
+    "id": 105,
+    "client_id": 105,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "11/03/2016",
     "time": "09:00 - 11:00",
@@ -54,10 +59,9 @@
     "star": "0"
 },
 {
-    "id": 105,
-    "photo": "/img/a6.jpg",
-    "name": "Carles",
-    "lastName": "Fernández",
+    "id": 106,
+    "client_id": 106,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "10/03/2016",
     "time": "12:00 - 14:00",
@@ -65,24 +69,12 @@
     "star": "1"
 },
 {
-    "id": 106,
-    "photo": "/img/a7.jpg",
-    "name": "Marta",
-    "lastName": "Forcadell",
+    "id": 107,
+    "client_id": 107,
+    "manager_id": 100,
     "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
     "date": "11/03/2016",
     "time": "09:00 - 11:00",
     "messagesUnread": "2",
     "star": "1"
-},
-{
-    "id": 107,
-    "photo": "/img/a3.jpg",
-    "name": "Jordi",
-    "lastName": "García",
-    "lastMessage": "Tu: perfecto, nos pondremos en contacto para confirmar la cita",
-    "date": "18/03/2016",
-    "time": "15:00 - 16:30",
-    "messagesUnread": "1",
-    "star": "0"
 }]

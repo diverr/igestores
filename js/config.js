@@ -37,11 +37,23 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        
-        .state('app.chats', {
+
+        .state('chats', {
+            abstract: true,
             url: "/chats",
+            templateUrl: "views/common/content.html",
+        })
+        
+        .state('chats.index', {
+            url: "/index",
             templateUrl: "views/chats.html",
-            data: { pageTitle: 'Chats' }
+            data: { pageTitle: 'Conversaciones' }
+        })
+
+        .state('chats.view', {
+            url: "/view/:id",
+            templateUrl: "views/chat_view.html",
+            data: { pageTitle: 'Conversaciones' }
         })
 
         .state('meetings', {
