@@ -1,0 +1,29 @@
+{
+  "name": "MORABANC",
+  "version": "1.0.0",
+  "description": "Aplicación para MORABANC",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diverr/igestores.git"
+  },
+  "keywords": [
+    "morabanc"
+  ],
+  "author": "David Santiago y Gustavo Novellón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diverr/igestores/issues"
+  },
+  "homepage": "https://github.com/diverr/igestores#readme",
+  "dependencies": {
+    "bower": "^1.7.6",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.6"
+  }
+}

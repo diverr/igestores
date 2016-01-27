@@ -26,7 +26,7 @@ function serviceMeetings($http, $q, Data, Clients) {
                     });
                 });
 
-                // cuando hay terminado todas las llamadas asíncronas ejecutamos el callback
+                // cuando haya terminado todas las llamadas asíncronas ejecutamos el callback
                 $q.all(requests).then(function() {
                     callback(result);    
                 });
