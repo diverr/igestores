@@ -5,11 +5,12 @@ function messagesList() {
     return {
 
         scope: {},
-        controller: function(Chats) {
+        controller: function(Chats, $stateParams) {
+            var id = $stateParams.id;
             var vm = this;
             vm.chat = {};
 
-            Chats.get(100, function(chat) {
+            Chats.get(id, function(chat) {
                 vm.chat = chat;
             });
 

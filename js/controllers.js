@@ -338,10 +338,20 @@ function ChatsCtrl($scope, $timeout, Chats) {
     });
 }
 
+function ChatViewCtrl(Chats, $stateParams) {
+    var id = $stateParams.id;
+    var vm = this;
+    vm.chat = {};
+    Chats.get(id, function(chat) {
+        vm.chat = chat;
+    });
+}
+
 angular
     .module('inspinia')
     .controller('MainCtrl', MainCtrl)
     .controller('CalendarCtrl', CalendarCtrl)
     .controller('MeetingsCtrl', MeetingsCtrl)
-    .controller('ChatsCtrl', ChatsCtrl);
+    .controller('ChatsCtrl', ChatsCtrl)
+    .controller('ChatViewCtrl', ChatViewCtrl);
 

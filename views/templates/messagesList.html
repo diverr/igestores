@@ -1,9 +1,9 @@
-<div class="chat-message left" ng-repeat="item in vm.chat.messages">
+<div class="chat-message" ng-class="{'right': item.is_manager, 'left': !item.is_manager}" ng-repeat="item in vm.chat.messages">
+    
     <img ng-if="item.is_manager" class="message-avatar" src="{{vm.chat.manager.photo}}" alt="" >
     <img ng-if="!item.is_manager" class="message-avatar" src="{{vm.chat.client.photo}}" alt="" >
 
     <div class="message">
-        
         <a class="message-author" href="#" ng-if="item.is_manager"> {{vm.chat.manager.name}} </a>
         <a class="message-author" href="#" ng-if="!item.is_manager"> {{vm.chat.client.name}} {{vm.chat.client.lastName}}</a>
 
