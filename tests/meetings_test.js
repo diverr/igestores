@@ -8,7 +8,7 @@ describe('Services Test', function () {
 
     describe('Meetings service', function () {
 
-        var meetingsService;
+        var clientsService;
 
         beforeEach(function () {
             inject(['Clients', function (service) {
@@ -18,15 +18,17 @@ describe('Services Test', function () {
         });
 
         it('debe devolver servicios', function () {
-            /*clientsService.getAll(function(items){
+            
+            clientsService.getAll(function(items){
                 // debe estar definido
                 expect(items).toBeDefined();
                 // debe devolver 2 items
                 expect(items.length).toBe(2);
-            });*/
+            });
 
-            var prueba = null;
-            expect(prueba).toBeDefined();
+            var result = 123;
+            expect(result).toBeDefined();
+            expect(result).toEqual(123);
             
         });
     });

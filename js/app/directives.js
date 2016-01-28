@@ -536,31 +536,3 @@ function markdownEditor() {
     }
 };
 
-/**
- *
- * Pass all functions into module
- */
-angular
-    .module('inspinia')
-    .directive('pageTitle', pageTitle)
-    .directive('sideNavigation', sideNavigation)
-    .directive('iboxTools', iboxTools)
-    .directive('minimalizaSidebar', minimalizaSidebar)
-    .directive('vectorMap', vectorMap)
-    .directive('sparkline', sparkline)
-    .directive('icheck', icheck)
-    .directive('ionRangeSlider', ionRangeSlider)
-    .directive('dropZone', dropZone)
-    .directive('responsiveVideo', responsiveVideo)
-    .directive('chatSlimScroll', chatSlimScroll)
-    .directive('customValid', customValid)
-    .directive('fullScroll', fullScroll)
-    .directive('closeOffCanvas', closeOffCanvas)
-    .directive('clockPicker', clockPicker)
-    .directive('landingScrollspy', landingScrollspy)
-    .directive('fitHeight', fitHeight)
-    .directive('iboxToolsFullScreen', iboxToolsFullScreen)
-    .directive('slimScroll', slimScroll)
-    .directive('truncate', truncate)
-    .directive('touchSpin', touchSpin)
-    .directive('markdownEditor', markdownEditor)

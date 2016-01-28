@@ -347,11 +347,5 @@ function ChatViewCtrl(Chats, $stateParams) {
     });
 }
 
-angular
-    .module('inspinia')
-    .controller('MainCtrl', MainCtrl)
-    .controller('CalendarCtrl', CalendarCtrl)
-    .controller('MeetingsCtrl', MeetingsCtrl)
-    .controller('ChatsCtrl', ChatsCtrl)
-    .controller('ChatViewCtrl', ChatViewCtrl);
+
 
