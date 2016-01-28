@@ -9,11 +9,13 @@ function serviceData($http) {
 
     return {
         getAll: function(type, callback) {
-
             if(refresh || items[type] == null) {
-                $http.get('/js/app/data/' + type + '.json').success(function (data) {
-                    items[type] = data;
-                    callback(data);
+                $http.get('/js/app/data/' + type + '.json').then(function (result) {
+                    items[type] = result.data;
+                    callback(result.data);
+                }, function(error) {
+                    console.log("ERROR");
+                    console.log(error);
                 });    
             } else {
                 callback(items[type]);
