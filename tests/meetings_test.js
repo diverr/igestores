@@ -8,20 +8,34 @@ describe('Services Test', function () {
 
     describe('Meetings service', function () {
 
-        var clientsService;
+        var clientsService, $httpBackend;
 
         beforeEach(function () {
+            
             inject(function($injector) {
                 clientsService = $injector.get('Clients');
+                $httpBackend = $injector.get('$httpBackend');
             });
+
         });
 
-        it('debe devolver servicios', function () {
+        
+
+
+        it('Prueba 1', function () {
             
             var prueba = clientsService.prueba();
-            expect(prueba).toBeDefined();
             expect(prueba).toEqual("hola");
             
+        });
+
+        it('Prueba 2', function (done) {
+            
+            clientsService.prueba2(function(data) {
+                console.log(data);
+                done();
+            });
+
         });
     });
 });
