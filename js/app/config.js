@@ -1,15 +1,10 @@
-function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdleProvider, KeepaliveProvider) {
+function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvider) {
 
     // Configure Idle settings
     IdleProvider.idle(5); // in seconds
     IdleProvider.timeout(120); // in seconds
 
     $urlRouterProvider.otherwise("/app/calendar");
-
-    $ocLazyLoadProvider.config({
-        // Set to true if you want to see what and when is dynamically loaded
-        debug: false
-    });
 
     $stateProvider
         
@@ -21,21 +16,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('app.calendar', {
             url: "/calendar",
             templateUrl: "views/calendar.html",
-            data: { pageTitle: 'Calendario de Citas' },
-            resolve: {
-                loadPlugin: function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        {
-                            insertBefore: '#loadBefore',
-                            files: ['css/plugins/fullcalendar/fullcalendar.css','js/plugins/fullcalendar/fullcalendar.min.js','js/plugins/fullcalendar/gcal.js']
-                        },
-                        {
-                            name: 'ui.calendar',
-                            files: ['js/plugins/fullcalendar/calendar.js']
-                        }
-                    ]);
-                }
-            }
+            data: { pageTitle: 'Calendario de Citas' }
         })
 
         .state('chats', {
