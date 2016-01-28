@@ -11,7 +11,7 @@ function serviceData($http) {
         getAll: function(type, callback) {
 
             if(refresh || items[type] == null) {
-                $http.get('/js/data/' + type + '.json').success(function (data) {
+                $http.get('/js/app/data/' + type + '.json').success(function (data) {
                     items[type] = data;
                     callback(data);
                 });    
