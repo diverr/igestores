@@ -8,25 +8,19 @@ describe('Services Test', function () {
 
     describe('Meetings service', function () {
 
-        var meetingsService;
+        var clientsService;
 
         beforeEach(function () {
-            inject(['Clients', function (service) {
-                    clientsService = service;
-                }
-            ]);
+            inject(function($injector) {
+                clientsService = $injector.get('Clients');
+            });
         });
 
         it('debe devolver servicios', function () {
-            /*clientsService.getAll(function(items){
-                // debe estar definido
-                expect(items).toBeDefined();
-                // debe devolver 2 items
-                expect(items.length).toBe(2);
-            });*/
-
-            var prueba = null;
+            
+            var prueba = clientsService.prueba();
             expect(prueba).toBeDefined();
+            expect(prueba).toEqual("hola");
             
         });
     });

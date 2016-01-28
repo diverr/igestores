@@ -16,6 +16,10 @@ function serviceClients($http, Data) {
                 callback(client);
                 return;
             });
+        },
+
+        prueba: function() {
+            return "hola";
         }
     };
 }
