@@ -14,8 +14,12 @@ function newMeetingForm() {
             vm.submitForm = function() {
                 vm.form.date = $("#date").val();
                 vm.form.time = $("#time").val();
-                //Meetings.add(vm.form);
-                vm.form = {};
+                Meetings.add(vm.form, function(obj) {
+                    alert("Cita añadida!");
+                    console.log("Objeto añadido...");    
+                    console.log(obj);
+                });
+                
             }
 
             Clients.getAll(function(data) {

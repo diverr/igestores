@@ -31,6 +31,22 @@ function serviceMeetings($http, $q, Data, Clients) {
                     callback(result);    
                 });
             });
+        },
+
+        add: function(meeting, callback) {
+            var obj = {
+                client_id: meeting.client.id,
+                manager_id: 100,
+                subject: meeting.subject,
+                description: meeting.description,
+                date: meeting.date,
+                time: meeting.time,
+                location: meeting.location
+            };
+
+            Data.add('meetings', obj, function(data){
+                callback(data);
+            });
         }
     };
 }

@@ -14,39 +14,57 @@ function serviceData($http) {
         });
     }
 
-    return {
-        getAll: function(type, callback) {
+    function getId(type, callback) {
+        getAll(type, function(items) {
+            var id = 0;
+            for(var i = 0; i < items.length; i++) {
+                if(parseInt(items[i].id) > id) {
+                    id = parseInt(items[i].id) + 1;
+                }
+            }
+            callback(id);
+        });
+    }
+
+    function save(type, data) {
+        localStorage.setItem(type, JSON.stringify(data));
+    }
+
+    function getAll(type, callback) {
+        
+        // si mandamos a refrescar cogemos del archivo json
+        if(refresh) {
+            console.log("Reiniciamos los valores, los obtenemos del archivo json");
+            localStorage.removeItem(type);
+            readJson(type, function(data) {
+                localStorage.setItem(type, JSON.stringify(data));
+                items[type] = data;
+                callback(data);
+            })
+        } else {
             
-            // si mandamos a refrescar cogemos del archivo json
-            if(refresh) {
-                console.log("Reiniciamos los valores, los obtenemos del archivo json");
-                localStorage.removeItem(type);
+            if(items[type] && items[type] != null) {
+                console.log("Coge del objeto en memoria");
+                callback(items[type]);
+            } else if(localStorage.getItem(type) && localStorage.getItem(type) != null) {
+                console.log("Coge del objeto en localStorage");
+                items[type] = JSON.parse(localStorage.getItem(type));
+                callback(items[type]);
+            } else {
+                console.log("Coge los datos del archivo json");
                 readJson(type, function(data) {
                     localStorage.setItem(type, JSON.stringify(data));
                     items[type] = data;
                     callback(data);
                 })
-            } else {
-                
-                if(items[type] && items[type] != null) {
-                    console.log("Coge del objeto en memoria");
-                    callback(items[type]);
-                } else if(localStorage.getItem(type) && localStorage.getItem(type) != null) {
-                    console.log("Coge del objeto en localStorage");
-                    items[type] = JSON.parse(localStorage.getItem(type));
-                    callback(items[type]);
-                } else {
-                    console.log("Coge los datos del archivo json");
-                    readJson(type, function(data) {
-                        localStorage.setItem(type, JSON.stringify(data));
-                        items[type] = data;
-                        callback(data);
-                    })
-                }
-
-                
             }
-        },
+
+            
+        }
+    }
+
+    return {
+        getAll: getAll,
 
         get: function(id, type, callback) {
             this.getAll(type, function(items) {
@@ -56,6 +74,17 @@ function serviceData($http) {
                         return;
                     }
                 }
+            });
+        }, 
+
+        add : function(type, obj) {
+            getId(type, function(id) {
+                obj.id = id;
+                getAll(type, function(items) {
+                    items.push(obj);
+                    save(type, items);
+                    return obj;
+                });
             });
         }
     };
