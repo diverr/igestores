@@ -3,54 +3,62 @@
     "photo": "/img/a1.jpg",
     "name": "Carles",
     "lastName": "Fernández",
-    "contact": "+376 600 123 000"
+    "contact": "+376 600 123 000",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 101,
     "photo": "/img/a2.jpg",
     "name": "Jordi",
     "lastName": "García",
-    "contact": "jgarcia74@hotmail.com"
+    "contact": "jgarcia74@hotmail.com",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 102,
     "photo": "/img/a3.jpg",
     "name": "Marta",
     "lastName": "Forcadell",
-    "contact": "mlopez_s@hotmail.com"
+    "contact": "mlopez_s@hotmail.com",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 103,
     "photo": "/img/a4.jpg",
     "name": "Federico",
     "lastName": "Trillo",
-    "contact": "+376 600 123 000"
+    "contact": "+376 600 123 000",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 104,
     "photo": "/img/a5.jpg",
     "name": "Juan",
     "lastName": "García",
-    "contact": "+376 660 822 143"
+    "contact": "+376 660 822 143",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 105,
     "photo": "/img/a6.jpg",
     "name": "Mónica",
     "lastName": "Carpintero",
-    "contact": "+376 600 123 000"
+    "contact": "+376 600 123 000",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 106,
     "photo": "/img/a7.jpg",
     "name": "Gabriel",
     "lastName": "Ruiz",
-    "contact": "jgarcia74@hotmail.com"
+    "contact": "jgarcia74@hotmail.com",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 107,
     "photo": "/img/a8.jpg",
     "name": "Lucio",
     "lastName": "Camacho",
-    "contact": "mlopez_s@hotmail.com"
+    "contact": "mlopez_s@hotmail.com",
+    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 }]

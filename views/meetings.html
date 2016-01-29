@@ -45,7 +45,7 @@
                                             <th data-sort-initial="true">Cliente</th>
                                             <th style="width: 150px;" >Fecha</th>
                                             <th style="width: 150px;" >Hora</th>
-                                            <th style="width: 200px;" >Contacto</th>
+                                            <th style="" >Contacto</th>
                                             <th data-sort-ignore="true"></th>
                                         </tr>
                                     </thead>
@@ -62,12 +62,12 @@
                                             <td><a class="client-link">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.comments}}</small></td>
                                             <td>{{item.date}}</td>
                                             <td>{{item.time}}</td>
-                                            <td>{{item.client.contact}}</td>
+                                            <td>Medio de contacto: {{item.client.contact}}<br/>Descripción: {{item.client.contact_address}}</td>
                                             <td>
 
                                                 <button type="button" class="btn btn-w-m btn-success"><i class="fa fa-check"></i> Asignar cita</button>
                                                 <button type="button" class="btn btn-outline btn-success"><i class="fa fa-comments-o"></i> Chat</button>
-                                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-trash-o"></i> Borrar</button>
+                                                
 
                                             </td>
                                         </tr>
