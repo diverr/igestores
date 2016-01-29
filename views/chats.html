@@ -23,20 +23,25 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="ibox">
-                <div class="ibox-content">
-                    <span class="text-muted small pull-right">  </span>
+                
+                <div class="ibox-title">
                     <h2>Conversaciones</h2>
-                    
+                </div>
 
-                    <div class="input-group">
-                    <input type="text" placeholder="Buscar conversación" class="input form-control">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn btn-success"> <i class="fa fa-search"></i> Buscar</button>
-                        </span>
+                <div class="ibox-content">
+                    
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-8">
+                            <div class="input-group">
+                                <input type="text" placeholder="Buscar conversación" class="input form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn btn-success"> <i class="fa fa-search"></i> Buscar</button>
+                                </span>
+                            </div>        
+                        </div>
                     </div>
-
-
                     
+
                     <div class="clients-list">
 
 
@@ -66,7 +71,7 @@
                                     <tbody>
 
 
-                                        <tr ng-repeat="item in vm.items">
+                                        <tr ng-repeat="item in vm.chats">
                                             <td><input type="checkbox"></td>
                                             <td class="client-avatar"><img alt="image" src="{{item.client.photo}}"> </td>
                                             <td><a class="client-link" ui-sref="chats.view({id: item.id})">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.lastMessage}}</small></td>

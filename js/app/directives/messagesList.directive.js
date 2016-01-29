@@ -10,20 +10,9 @@ function messagesList() {
             var vm = this;
             vm.chat = {};
 
-            var eo = null;
-
             Chats.get(id, function(chat) {
-                console.log(chat);
                 vm.chat = chat;
-
-                eo = chat;
             });
-
-            $timeout(function() {
-                vm.chat = eo;
-
-            }, 2000);
-
         },
         controllerAs: 'vm',
         templateUrl: '/views/templates/messagesList.html'

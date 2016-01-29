@@ -25,12 +25,19 @@
     <div class="form-group">
         <label class="col-lg-2 control-label">Ubicación</label>
         <div class="col-lg-10">
-            <select chosen class="form-control">
-                <option>Seleccione ubicación</option>
+            <select chosen 
+                    data-placeholder="Seleccione ubicación"
+                    ng-model="vm.search.location"
+                    class="form-control" >
+
                 <option>Sala 1</option>
                 <option>Sala 2</option>
                 <option>Sala 3</option>
                 <option>Sala 4</option>
+
+            </select>
+                
+                
             </select>
         </div>
     </div>
@@ -38,12 +45,12 @@
     <div class="form-group">
         <label class="col-lg-2 control-label">Cliente</label>
         <div class="col-lg-10">
-            <select chosen class="form-control">
-                <option>Seleccione cliente</option>
-                <option>Cliente 1</option>
-                <option>Cliente 2</option>
-                <option>Cliente 3</option>
-                <option>Cliente 4</option>
+            <select chosen 
+                    data-placeholder="Seleccione cliente"
+                    ng-model="vm.search.client"
+                    ng-options="client as client.name + ' ' + client.lastName for client in vm.clients"
+                    class="form-control" >
+                    <option value=""></option>
             </select>
         </div>
     </div>

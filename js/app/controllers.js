@@ -310,27 +310,73 @@ function CalendarCtrl($scope) {
     $scope.eventSources = [$scope.events];
 }
 
-function MeetingsCtrl($scope, $timeout, Meetings) {
+function MeetingsCtrl($scope, $timeout, Meetings, Clients) {
     var vm = this;
-    vm.items = [];
-
+    vm.meetings = [];
+    vm.clients = [];
+    
+    vm.search = {};
+    vm.search.client = null;
+    vm.search.results = [];
+    vm.isSearch = false;
+    
     Meetings.getAll(function(data) {
-        vm.items = data;
+        vm.meetings = data;
 
         $timeout(function(){
             $('.table').trigger('footable_redraw');
         }, 100);
     });
 
+    Clients.getAll(function(data) {
+        vm.clients = data;
+    });
     
+    vm.doSearch = function() {
+        vm.search.results = [];
+        vm.isSearch = true;
+
+        for(var i = 0; i < vm.meetings.length; i++) {
+            var meeting = vm.meetings[i];
+
+            if(vm.search.client != null) {
+                if(meeting.client.id != vm.search.client.id) {
+                    continue;
+                }
+            }
+            if(vm.search.subject && vm.search.subject != '') {
+                if(meeting.subject.toLowerCase().indexOf(vm.search.subject.toLowerCase()) == -1) {
+                    continue;
+                }
+            }
+            if(vm.search.description && vm.search.description != '') {
+                if(meeting.description.toLowerCase().indexOf(vm.search.description.toLowerCase()) == -1) {
+                    continue;
+                }
+            }
+
+            vm.search.results.push(meeting);
+
+        }
+
+        $timeout(function(){
+            $('.table').trigger('footable_redraw');
+        }, 100);
+
+
+    }
+
+    vm.cancelSearh = function() {
+        vm.isSearch = false;
+    }
 }
 
 function ChatsCtrl($scope, $timeout, Chats) {
     var vm = this;
-    vm.items = [];
+    vm.chats = [];
     
     Chats.getAll(function(data) {
-        vm.items = data;
+        vm.chats = data;
 
         $timeout(function(){
             $('.table').trigger('footable_redraw');
