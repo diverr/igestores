@@ -5,7 +5,8 @@
     "subject": "Contratación de fondo",
     "description": "Descripción de la cita.",
     "date": "11/03/2016",
-    "time": "09:00 - 11:00"
+    "time": "09:00 - 11:00",
+    "location": "En la oficina"
 },
 {
     "id": 102,
@@ -14,7 +15,8 @@
     "subject": "Firma de documentación",
     "description": "Descripción de la cita.",
     "date": "18/03/2016",
-    "time": "15:00 - 16:30"
+    "time": "15:00 - 16:30",
+    "location": "En la oficina"
 },
 {
     "id": 103,
@@ -23,7 +25,8 @@
     "subject": "Declaración de la renta",
     "description": "Descripción de la cita.",
     "date": "19/03/2016",
-    "time": "10:00 - 11:30"
+    "time": "10:00 - 11:30",
+    "location": "En la oficina"
 },
 {
     "id": 104,
@@ -32,7 +35,8 @@
     "subject": "Contratación de fondo",
     "description": "Descripción de la cita.",
     "date": "11/03/2016",
-    "time": "09:00 - 11:00"
+    "time": "09:00 - 11:00",
+    "location": "En la oficina"
 },
 {
     "id": 105,
@@ -41,7 +45,8 @@
     "subject": "Baja de cuenta",
     "description": "Descripción de la cita.",
     "date": "10/03/2016",
-    "time": "12:00 - 14:00"
+    "time": "12:00 - 14:00",
+    "location": "En la oficina"
 },
 {
     "id": 106,
@@ -50,7 +55,8 @@
     "subject": "Contratación de fondo",
     "description": "Descripción de la cita.",
     "date": "11/03/2016",
-    "time": "09:00 - 11:00"
+    "time": "09:00 - 11:00",
+    "location": "En la oficina"
 },
 {
     "id": 107,
@@ -59,7 +65,8 @@
     "subject": "Firma de documentación",
     "description": "Descripción de la cita.",
     "date": "18/03/2016",
-    "time": "15:00 - 16:30"
+    "time": "15:00 - 16:30",
+    "location": "En la oficina"
 },
 {
     "id": 108,
@@ -68,7 +75,8 @@
     "subject": "Declaración de la renta",
     "description": "Descripción de la cita.",
     "date": "19/03/2016",
-    "time": "10:00 - 11:30"
+    "time": "10:00 - 11:30",
+    "location": "En la oficina"
 },
 {
     "id": 109,
@@ -77,5 +85,6 @@
     "subject": "Contratación de fondo",
     "description": "Descripción de la cita.",
     "date": "11/03/2016",
-    "time": "09:00 - 11:00"
+    "time": "09:00 - 11:00",
+    "location": "En la oficina"
 }]

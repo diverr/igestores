@@ -5,12 +5,18 @@ function newMeetingForm() {
     return {
 
         scope: {},
-        controller: function(Clients) {
+        controller: function(Clients, Meetings) {
             var vm = this;
 
+            vm.form = {};
             vm.clients = [];
-            vm.search = {};
-            vm.search.client = null;
+            
+            vm.submitForm = function() {
+                vm.form.date = $("#date").val();
+                vm.form.time = $("#time").val();
+                //Meetings.add(vm.form);
+                vm.form = {};
+            }
 
             Clients.getAll(function(data) {
                 vm.clients = data;
