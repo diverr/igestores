@@ -336,34 +336,13 @@ function MeetingsCtrl($scope, $timeout, Meetings, Clients) {
         vm.search.results = [];
         vm.isSearch = true;
 
-        for(var i = 0; i < vm.meetings.length; i++) {
-            var meeting = vm.meetings[i];
+        Meetings.search(vm.search, function(meetings) {
+            vm.search.results = meetings;
 
-            if(vm.search.client != null) {
-                if(meeting.client.id != vm.search.client.id) {
-                    continue;
-                }
-            }
-            if(vm.search.subject && vm.search.subject != '') {
-                if(meeting.subject.toLowerCase().indexOf(vm.search.subject.toLowerCase()) == -1) {
-                    continue;
-                }
-            }
-            if(vm.search.description && vm.search.description != '') {
-                if(meeting.description.toLowerCase().indexOf(vm.search.description.toLowerCase()) == -1) {
-                    continue;
-                }
-            }
-
-            vm.search.results.push(meeting);
-
-        }
-
-        $timeout(function(){
-            $('.table').trigger('footable_redraw');
-        }, 100);
-
-
+            $timeout(function(){
+                $('.table').trigger('footable_redraw');
+            }, 100);
+        });
     }
 
     vm.cancelSearh = function() {

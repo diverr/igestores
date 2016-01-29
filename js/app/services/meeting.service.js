@@ -2,7 +2,7 @@ angular.module('inspinia')
 .service('Meetings', serviceMeetings);
 
 function serviceMeetings($http, $q, Data, Clients) {
-    
+
     return {
         getAll: function(callback) {
             var result = [];
@@ -18,7 +18,7 @@ function serviceMeetings($http, $q, Data, Clients) {
 
                     // le asociamos el cliente
                     Clients.get(meeting.client_id, function(client) {
-                        
+
                         meeting.client = client;
                         result.push(meeting);
                         deferred.resolve();
@@ -30,6 +30,35 @@ function serviceMeetings($http, $q, Data, Clients) {
                 $q.all(requests).then(function() {
                     callback(result);    
                 });
+            });
+        },
+
+        search: function(searchArray, callback) {
+            var results = [];
+
+            this.getAll(function(meetings) {
+                for(var i = 0; i < meetings.length; i++) {
+                    var meeting = meetings[i];
+
+                    if(searchArray.client != null) {
+                        if(meeting.client.id != searchArray.client.id) {
+                            continue;
+                        }
+                    }
+                    if(searchArray.subject && searchArray.subject != '') {
+                        if(meeting.subject.toLowerCase().indexOf(searchArray.subject.toLowerCase()) == -1) {
+                            continue;
+                        }
+                    }
+                    if(searchArray.description && searchArray.description != '') {
+                        if(meeting.description.toLowerCase().indexOf(searchArray.description.toLowerCase()) == -1) {
+                            continue;
+                        }
+                    }
+                    results.push(meeting);
+
+                }
+                callback(results);
             });
         },
 

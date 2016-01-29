@@ -5,7 +5,7 @@ function newMeetingForm() {
     return {
 
         scope: {},
-        controller: function(Clients, Meetings) {
+        controller: function($location, Clients, Meetings) {
             var vm = this;
 
             vm.form = {};
@@ -15,9 +15,8 @@ function newMeetingForm() {
                 vm.form.date = $("#date").val();
                 vm.form.time = $("#time").val();
                 Meetings.add(vm.form, function(obj) {
-                    alert("Cita añadida!");
-                    console.log("Objeto añadido...");    
-                    console.log(obj);
+                    alert("Cita añadida");
+                    $location.path('/meetings/index');
                 });
                 
             }

@@ -77,13 +77,13 @@ function serviceData($http) {
             });
         }, 
 
-        add : function(type, obj) {
+        add : function(type, obj, callback) {
             getId(type, function(id) {
                 obj.id = id;
                 getAll(type, function(items) {
                     items.push(obj);
                     save(type, items);
-                    return obj;
+                    callback(obj);
                 });
             });
         }
