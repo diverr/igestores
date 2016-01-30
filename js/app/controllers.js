@@ -259,21 +259,35 @@ function MainCtrl() {
 };
 
 
-function CalendarCtrl($scope) {
+function CalendarCtrl($scope, Meetings, Helper) {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
 
+    $scope.events = [];
+
     // Events
-    $scope.events = [
+    /*$scope.events = [
         {title: 'Probando',start: new Date(y, m, 1)},
         {title: 'Hola amigos',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
         {id: 999,title: 'Evento periódico',start: new Date(y, m, d - 3, 16, 0),allDay: false},
         {id: 999,title: 'Evento periódico',start: new Date(y, m, d + 4, 16, 0),allDay: false},
         {title: 'Cumpleaños',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
         {title: 'elmundo.es',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://www.elmundo.es'}
-    ];
+    ];*/
+
+    Meetings.getAll(function(meetings) {
+        for(var i = 0; i < meetings.length; i++) {
+            var meeting = meetings[i];
+            $scope.events.push({
+                title: meeting.subject,
+                start: moment(Helper.transformDate(meeting.date)).toDate(),
+                url: 'http://www.elmundo.es'
+            });
+        }
+    });
+
 
 
     /* message on eventClick */
