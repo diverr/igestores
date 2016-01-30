@@ -80,7 +80,7 @@
 
                                 <div class="form-group">
 
-                                    <textarea class="form-control message-input" name="message" placeholder="Escribe aquí tu mensaje"></textarea>
+                                    <textarea class="form-control message-input" name="message" placeholder="Escribe aquí tu mensaje" ng-keypress="vm.keypress($event);" ng-model="vm.myMessage" id="myMessage"></textarea>
                                 </div>
 
                             </div>

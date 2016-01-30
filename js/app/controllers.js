@@ -353,6 +353,7 @@ function MeetingsCtrl($scope, $timeout, Meetings, Clients) {
 function ChatsCtrl($scope, $timeout, Chats) {
     var vm = this;
     vm.chats = [];
+    vm.myMessage = '';
     
     Chats.getAll(function(data) {
         vm.chats = data;
@@ -370,6 +371,13 @@ function ChatViewCtrl(Chats, $stateParams) {
     Chats.get(id, function(chat) {
         vm.chat = chat;
     });
+
+    vm.keypress = function(event) {
+        if(event.keyCode == 13) {
+            Chats.addMessage(vm.myMessage, vm.chat);
+            vm.myMessage = '';
+        }
+    };
 }
 
 angular
