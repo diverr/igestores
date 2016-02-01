@@ -62,6 +62,23 @@ function serviceMeetings($http, $q, Data, Clients) {
             });
         },
 
+        get: function(id, callback) {
+            var parent = this;
+
+            var result = null;
+
+            Data.get(id, 'meetings', function(meeting) {
+                
+                // le asociamos el cliente
+                Clients.get(meeting.client_id, function(client) {
+                    meeting.client = client;
+
+                    callback(meeting);
+                    return;
+                })
+            });
+        },
+
         add: function(meeting, callback) {
             var obj = {
                 client_id: meeting.client.id,
@@ -74,6 +91,23 @@ function serviceMeetings($http, $q, Data, Clients) {
             };
 
             Data.add('meetings', obj, function(data){
+                callback(data);
+            });
+        },
+
+        update: function(meeting, callback) {
+            var obj = {
+                id: meeting.id,
+                client_id: meeting.client.id,
+                manager_id: 100,
+                subject: meeting.subject,
+                description: meeting.description,
+                date: meeting.date,
+                time: meeting.time,
+                location: meeting.location
+            };
+
+            Data.update('meetings', obj, function(data){
                 callback(data);
             });
         }

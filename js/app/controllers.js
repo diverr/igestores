@@ -259,7 +259,7 @@ function MainCtrl() {
 };
 
 
-function CalendarCtrl($scope, Meetings, Helper) {
+function CalendarCtrl($scope, Meetings, Helper, $location) {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -276,14 +276,14 @@ function CalendarCtrl($scope, Meetings, Helper) {
         {title: 'Cumpleaños',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
         {title: 'elmundo.es',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://www.elmundo.es'}
     ];*/
-
+    console.log($location);
     Meetings.getAll(function(meetings) {
         for(var i = 0; i < meetings.length; i++) {
             var meeting = meetings[i];
             $scope.events.push({
                 title: meeting.subject,
                 start: moment(Helper.transformDate(meeting.date)).toDate(),
-                url: 'http://www.elmundo.es'
+                url: '/#/meetings/edit/' + meeting.id
             });
         }
     });

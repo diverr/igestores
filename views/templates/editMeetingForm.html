@@ -1,0 +1,108 @@
+<form class="form-horizontal">
+
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Cliente</label>
+        <div class="col-lg-7">
+            <div class="row">
+
+                <div class="col-lg-1">
+                    <div class="client-avatar">
+                        <img alt="image" src="{{vm.form.client.photo}}">
+                    </div>        
+                </div>    
+
+                <div class="col-lg-11">
+                    <div style="padding-top: 5px;">
+                        <strong>{{vm.form.client.name}} {{vm.form.client.lastName}}</strong>
+                    </div>
+                </div>    
+
+            </div>
+            
+        </div>
+
+        <div class="col-lg-3">
+            <button type="button" class="btn btn-outline btn-success"><i class="fa fa-comments-o"></i> Ficha cliente</button>
+            <button type="button" class="btn btn-outline btn-success"><i class="fa fa-comments-o"></i> Chat</button>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Fecha</label>
+        <div class="col-lg-10">
+            <div class="input-group date">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input id="date" type="datetime" class="form-control" date-time ng-model="vm._date" view="date" auto-close="true" min-view="date" format="DD-MM-YYYY">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Hora</label>
+        <div class="col-lg-10">
+
+            <div class="input-group clockpicker" data-autoclose="true">
+                <span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
+                <input id="time" type="text" class="form-control" value="09:30" vm.model="vm._time">
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Ubicación</label>
+        <div class="col-lg-10">
+            <select chosen 
+            data-placeholder="Seleccione ubicación"
+            ng-model="vm.form.location"
+            class="form-control" >
+
+            <option>Sala 1</option>
+            <option>Sala 2</option>
+            <option>Sala 3</option>
+            <option>Sala 4</option>
+
+        </select>
+
+
+    </select>
+</div>
+</div>
+
+
+
+<div class="form-group">
+    <label class="col-lg-2 control-label">Asunto</label>
+    <div class="col-lg-10">
+        <input type="text" placeholder="Asunto" class="form-control" ng-model="vm.form.subject">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-lg-2 control-label">Descripción</label>
+    <div class="col-lg-10">
+        <textarea class="form-control" placeholder="Descripción" ng-model="vm.form.description"></textarea>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10 pull-right">
+        <div class="pull-right">
+            <button type="submit" class="btn btn-w-m btn-success" ng-click="vm.submitForm();"><i class="fa fa-check"></i> Actualizar cita</button>
+            <button type="button" class="btn btn-outline btn-success"><i class="fa fa-ban"></i> Cancelar</button>
+        </div>
+    </div>
+</div>
+
+</form>
+
+<script>
+
+    $(function(){
+        $('.clockpicker').clockpicker();
+    });
+
+</script>

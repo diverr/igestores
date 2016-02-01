@@ -67,7 +67,7 @@ function serviceData($http) {
         getAll: getAll,
 
         get: function(id, type, callback) {
-            this.getAll(type, function(items) {
+            getAll(type, function(items) {
                 for(var i = 0; i < items.length; i++) {
                     if(items[i].id == id) {
                         callback(items[i]);
@@ -86,6 +86,19 @@ function serviceData($http) {
                     callback(obj);
                 });
             });
+        },
+
+        update: function(type, obj, callback) {
+            getAll(type, function(items) {
+                for(var i = 0; i < items.length; i++) {
+                    if(items[i].id == obj.id) {
+                        items[i] = obj;
+                        save(type, items);
+                        callback(obj);
+                        return;
+                    }
+                }
+            })
         }
     };
 
