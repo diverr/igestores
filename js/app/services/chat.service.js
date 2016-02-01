@@ -80,6 +80,7 @@ function serviceChats($http, $q, Data, Clients, Managers) {
         addMessage: function(myMessage, chat) {
             console.log(myMessage);
             console.log(chat);
+            return 1;
         }
     };
 }

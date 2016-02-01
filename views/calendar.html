@@ -1,3 +1,5 @@
+<link href="/css/jquery.e-calendar.css" rel="stylesheet">
+
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-8">
         <h2>Calendario de citas</h2>
@@ -12,8 +14,8 @@
                     <h5>Calendario</h5>
                 </div>
                 <div class="ibox-content">
-                    
-                    [[CALENDARIO]]
+
+                    <div id="minicalendar-quitaesto"></div>
                 </div>
             </div>
 
@@ -22,8 +24,8 @@
                     <h5>Crear nueva cita</h5>
                 </div>
                 <div class="ibox-content">
-                    
-                    <new-meeting-form></new-meeting-form>
+
+                    <new-meeting-form template-url="/views/templates/newMeetingFormLittle.html"></new-meeting-form>
                     
                 </div>
             </div>
@@ -46,3 +48,17 @@
         </div>
     </div>
 </div>
+
+<script src="/js/plugins/jquery.e-calendar.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#minicalendar').eCalendar({
+        weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        textArrows: {previous: '<', next: '>'},
+        eventTitle: 'Calendario',
+        url: '',
+        events: []
+    });
+});  
+</script>

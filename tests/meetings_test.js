@@ -8,13 +8,14 @@ describe('Services Test', function () {
 
     describe('Meetings service', function () {
 
-        var clientsService, $httpBackend;
+        var Clients, Meetings, Chats;
 
         beforeEach(function () {
             
             inject(function($injector) {
-                clientsService = $injector.get('Clients');
-                $httpBackend = $injector.get('$httpBackend');
+                Clients = $injector.get('Clients');
+                Meetings = $injector.get('Meetings');
+                Chats = $injector.get('Chats');
             });
 
         });
@@ -22,20 +23,30 @@ describe('Services Test', function () {
         
 
 
-        it('Prueba 1', function () {
+        it('Clientes...', function (done) {
             
-            var prueba = clientsService.prueba();
-            expect(prueba).toEqual("hola");
-            
-        });
+            Clients.prueba2(function(data) {
+                expect(data).not.toBe(null);
+                
 
-        it('Prueba 2', function (done) {
-            
-            clientsService.prueba2(function(data) {
-                console.log(data);
-                done();
+                Clients.getAll(function(data) {
+                    expect(data).not.toBe(null);
+                    done();                    
+                });
             });
 
+            /*Clients.getAll(function(clients) {
+                expect(clients.length).toBeGreatherThan(1);
+
+                Clients.get(100, function(client) {
+                    expect(client).not.toBe(null);
+
+                    done();                    
+                })
+            });*/
+            
+            
+            
         });
     });
 });

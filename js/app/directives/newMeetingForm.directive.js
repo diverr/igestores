@@ -26,7 +26,9 @@ function newMeetingForm() {
             });
         },
         controllerAs: 'vm',
-        templateUrl: '/views/templates/newMeetingForm.html'
+        templateUrl: function(elem, attrs) {
+            return attrs.templateUrl || '/views/templates/newMeetingForm.html'
+        }
 
     };
 }
