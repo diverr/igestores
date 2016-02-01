@@ -46,7 +46,7 @@
 
                                     <thead>
                                         <tr>
-                                            <th style="width: 40px;" data-sort-ignore="true"></th>
+                                            
                                             <th style="width: 40px;" data-sort-ignore="true"></th>
                                             <th>Cliente</th>
                                             <th style="width: 150px;" data-sort-initial="descending">Fecha</th>
@@ -63,7 +63,7 @@
 
 
                                         <tr ng-repeat="item in vm.meetings">
-                                            <td><input type="checkbox"></td>
+                                            
                                             <td class="client-avatar"><img alt="image" src="{{item.client.photo}}"> </td>
                                             <td><a class="client-link" ui-sref="meetings.edit({id: item.id})">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.subject}}</small></td>
                                             <td>{{item.date}}</td>
@@ -82,7 +82,7 @@
 
                                     <tfoot class="hide-if-no-paging">
                                         <tr>
-                                            <td colspan="8" align="center">
+                                            <td colspan="7" align="center">
                                               <ul class="pagination"></ul>
                                             </td>
                                         </tr>
