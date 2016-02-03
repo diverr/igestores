@@ -46,7 +46,7 @@
         <label class="col-lg-2 control-label">Cliente</label>
         <div class="col-lg-10">
             <select chosen 
-                    data-placeholder="Seleccione cliente o Id Altamira"
+                    data-placeholder="Seleccione cliente o Id"
                     ng-model="vm.form.client"
                     ng-options="client as client.altamira + ' | ' + client.name + ' ' + client.lastName for client in vm.clients"
                     class="form-control" >
