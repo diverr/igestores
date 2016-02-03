@@ -4,7 +4,8 @@ angular.module('inspinia')
 function serviceData($http) {
 
     var items = {};
-    var refresh = true;
+    var refresh = false;
+    var cookieName = "morabanc_refresh";
     
     function readJson(type, callback) {
         var url = '/js/app/data/' + type + '.json';
@@ -32,6 +33,14 @@ function serviceData($http) {
 
     function getAll(type, callback) {
         
+        var cookie = getCookie(cookieName);
+        if(!cookie || cookie == null) {
+            refresh = true;
+            console.log("Refrescamos");
+            // dejamos los datos en memoria por 10 minutos
+            setCookie(cookieName, "1", 10);
+        }
+
         // si mandamos a refrescar cogemos del archivo json
         if(refresh) {
             console.log("Reiniciamos los valores, los obtenemos del archivo json");
@@ -63,6 +72,24 @@ function serviceData($http) {
         }
     }
 
+    function setCookie(cname, cvalue, min) {
+        var d = new Date();
+        d.setTime(d.getTime() + (min*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+    
     return {
         getAll: getAll,
 
