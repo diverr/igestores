@@ -1,5 +1,6 @@
 [{
     "id": 100,
+    "altamira": "234234",
     "photo": "/img/a1.jpg",
     "name": "Carles",
     "lastName": "Fernández",
@@ -8,6 +9,7 @@
 },
 {
     "id": 101,
+    "altamira": "333345",
     "photo": "/img/a2.jpg",
     "name": "Jordi",
     "lastName": "García",
@@ -16,6 +18,7 @@
 },
 {
     "id": 102,
+    "altamira": "384545",
     "photo": "/img/a3.jpg",
     "name": "Marta",
     "lastName": "Forcadell",
@@ -24,6 +27,7 @@
 },
 {
     "id": 103,
+    "altamira": "304857",
     "photo": "/img/a4.jpg",
     "name": "Federico",
     "lastName": "Trillo",
@@ -32,6 +36,7 @@
 },
 {
     "id": 104,
+    "altamira": "202398",
     "photo": "/img/a5.jpg",
     "name": "Juan",
     "lastName": "García",
@@ -40,6 +45,7 @@
 },
 {
     "id": 105,
+    "altamira": "348534",
     "photo": "/img/a6.jpg",
     "name": "Mónica",
     "lastName": "Carpintero",
@@ -48,6 +54,7 @@
 },
 {
     "id": 106,
+    "altamira": "034857",
     "photo": "/img/a7.jpg",
     "name": "Gabriel",
     "lastName": "Ruiz",
@@ -56,6 +63,7 @@
 },
 {
     "id": 107,
+    "altamira": "230982",
     "photo": "/img/a8.jpg",
     "name": "Lucio",
     "lastName": "Camacho",

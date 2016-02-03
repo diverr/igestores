@@ -4,7 +4,7 @@ angular.module('inspinia')
 function serviceData($http) {
 
     var items = {};
-    var refresh = false;
+    var refresh = true;
     
     function readJson(type, callback) {
         var url = '/js/app/data/' + type + '.json';
