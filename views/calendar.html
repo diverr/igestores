@@ -6,47 +6,10 @@
         
     </div>
 </div>
-<div class="wrapper wrapper-content" ng-controller="CalendarCtrl">
-    <div class="row animated fadeInDown">
-        <div class="col-lg-3">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Calendario</h5>
-                </div>
-                <div class="ibox-content">
+<div class="wrapper wrapper-content">
+    
+    <my-calendar></my-calendar>
 
-                    <div id="minicalendar-quitaesto"></div>
-                </div>
-            </div>
-
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Crear nueva cita</h5>
-                </div>
-                <div class="ibox-content">
-
-                    <new-meeting-form template-url="/views/templates/newMeetingFormLittle.html"></new-meeting-form>
-                    
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-lg-9">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Calendario</h5>
-                    <div ibox-tools></div>
-                </div>
-
-                <div class="ibox-content ui-calendar">
-                    <div class="btn-toolbar">
-                        <p class="lead">Calendario de citas</p>
-                    </div>
-                    <div ui-calendar="uiConfig.calendar" calendar="myCalendar1" class="calendar" ng-model="eventSources"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script src="/js/plugins/jquery.e-calendar.js"></script>

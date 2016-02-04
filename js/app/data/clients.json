@@ -5,7 +5,7 @@
     "name": "Carles",
     "lastName": "Fernández",
     "contact": "+376 600 123 000",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 101,
@@ -14,7 +14,7 @@
     "name": "Jordi",
     "lastName": "García",
     "contact": "jgarcia74@hotmail.com",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 102,
@@ -23,7 +23,7 @@
     "name": "Marta",
     "lastName": "Forcadell",
     "contact": "mlopez_s@hotmail.com",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 103,
@@ -32,7 +32,7 @@
     "name": "Federico",
     "lastName": "Trillo",
     "contact": "+376 600 123 000",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 104,
@@ -41,7 +41,7 @@
     "name": "Juan",
     "lastName": "García",
     "contact": "+376 660 822 143",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 105,
@@ -50,7 +50,7 @@
     "name": "Mónica",
     "lastName": "Carpintero",
     "contact": "+376 600 123 000",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 106,
@@ -59,7 +59,7 @@
     "name": "Gabriel",
     "lastName": "Ruiz",
     "contact": "jgarcia74@hotmail.com",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 },
 {
     "id": 107,
@@ -68,5 +68,5 @@
     "name": "Lucio",
     "lastName": "Camacho",
     "contact": "mlopez_s@hotmail.com",
-    "contact_address": "333333333, Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
+    "contact_address": "Oficina 31 Avda Merritxell 35, Cafeteria Antonio, Calle Delicias 12 Madrid"
 }]

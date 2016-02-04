@@ -51,7 +51,8 @@
                                             <th>Cliente</th>
                                             <th style="width: 150px;" data-sort-initial="descending">Fecha</th>
                                             <th style="width: 150px;" >Hora</th>
-                                            <th style="" >Contacto</th>
+                                            <th style="" data-sort-ignore="true">Contacto</th>
+                                            <th style="" data-sort-ignore="true"></th>
                                             <th data-sort-ignore="true"></th>
                                         </tr>
                                     </thead>
@@ -68,7 +69,8 @@
                                             <td><a class="client-link" ui-sref="meetings.edit({id: item.id})">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.subject}}</small></td>
                                             <td>{{item.date}}</td>
                                             <td>{{item.time}}</td>
-                                            <td>Medio de contacto: {{item.client.contact}}<br/>Descripción: {{item.client.contact_address}}</td>
+                                            <td>Oficina: </td>
+                                            <td>{{item.client.contact_address}}</td>
                                             <td>
 
                                                 <button type="button" class="btn btn-w-m btn-success"><i class="fa fa-check"></i> Asignar cita</button>
