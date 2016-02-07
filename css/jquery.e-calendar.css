@@ -37,7 +37,7 @@
 .c-day-previous-month {
     width: 14.28%;
     height: 13%;
-    background-color: #F9FBFD;
+    background-color: #FFF;
     float: left;
     text-align: center;
     color: gray;
@@ -46,7 +46,7 @@
 .c-day-next-month {
     width: 14.28%;
     height: 13%;
-    background-color: #F9FBFD;
+    background-color: #FFF;
     float: left;
     text-align: center;
     color: gray;
@@ -55,11 +55,11 @@
 .c-week-day {
     width: 14.28%;
     height: 10.38%;
-    background-color: rgb(145, 172, 203);
-    color: white;
+    background-color: #FFF;
+    color: black;
     float: left;
     text-align: center;
-    font-weight: bold;
+    font-weight: 100;
     padding-top: 1%;
 }
 
@@ -103,7 +103,7 @@
 
 .c-grid {
     float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .c-event-grid {
@@ -112,13 +112,14 @@
     width: 49%;
     float: left;
     box-shadow: 2px 2px 5px #888888;
+    display: none;
 }
 
 .c-grid-title {
-    font-weight: bold;
+    font-weight: 100;
     float: left;
-    background-color: rgb(112, 145, 183);
-    color: white;
+    background-color: #FFF;
+    color: black;
 }
 
 .c-event-title {

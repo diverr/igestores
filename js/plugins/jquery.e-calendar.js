@@ -116,7 +116,7 @@
             }
             var day = 1;
             var dayOfNextMonth = 1;
-            for (var i = 0; i < 42; i++) {
+            for (var i = 1; i < 35; i++) {
                 var cDay = $('<div/>');
                 if (i < dWeekDayOfMonthStart) {
                     cDay.addClass('c-day-previous-month c-pad-top');
