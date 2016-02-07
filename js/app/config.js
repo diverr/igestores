@@ -4,7 +4,7 @@ function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvi
     IdleProvider.idle(5); // in seconds
     IdleProvider.timeout(120); // in seconds
 
-    $urlRouterProvider.otherwise("/app/calendar");
+    $urlRouterProvider.otherwise("/app/desktop");
 
     $stateProvider
         
@@ -12,6 +12,11 @@ function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvi
             abstract: true,
             url: "/app",
             templateUrl: "views/common/content.html",
+        })
+        .state('app.desktop', {
+            url: "/desktop",
+            templateUrl: "views/desktop.html",
+            data: { pageTitle: 'Escritorio' }
         })
         .state('app.calendar', {
             url: "/calendar",

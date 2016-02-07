@@ -38,3 +38,20 @@ body {
 .btn-gris {
     background-color: #6E757F;
 }
+
+/* BAQUETONES DE ESCRITORIO */
+.custom1-bg {
+    background-color: #649ECC;
+    color: #fff;
+}
+.custom2-bg {
+    background-color: #2A4F7B;
+    color: #fff;
+}
+.custom3-bg {
+    background-color: #4D5258;
+    color: #fff;
+}
+.custom1-bg a, .custom2-bg a, .custom3-bg a{
+    color: #fff;
+}
