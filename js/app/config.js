@@ -62,6 +62,11 @@ function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvi
             templateUrl: "views/meetings_search.html",
             data: { pageTitle: 'Citas' }
         })
+        .state('meetings.archive', {
+            url: "/archive/:id",
+            templateUrl: "views/meetings_archive.html",
+            data: { pageTitle: 'Citas' }
+        })
 
         .state('login', {
             url: "/login",

@@ -1,0 +1,112 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Conversaciones</h2>
+
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a>Conversaciones</a>
+            </li>
+            <li class="active">
+                <strong>Conversaciones recientes</strong>
+            </li>
+        </ol>
+        
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="MeetingsArchiveCtrl as vm">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="ibox">
+
+                <div class="ibox-title">
+                    <h2>Archivar consulta</h2>
+                </div>
+
+
+                <div class="ibox-content">
+
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Cliente</label>
+
+                            <div class="col-lg-10">
+                                <div style="padding-top: 5px;">
+                                    <strong>{{vm.form.client.name}} {{vm.form.client.lastName}}</strong>
+                                </div>
+                            </div>   
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Asunto</label>
+                            <div class="col-lg-10">
+                                {{vm.form.subject}}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Fecha</label>
+                            <div class="col-lg-10">
+
+                                {{vm.form.date}}
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Categorías</label>
+                            <div class="col-lg-10">
+                                <select name="" id="" class="form-control select2_demo_2" multiple="multiple">
+                                    <option value="Nombre de categoria 1">Nombre de categoría 1</option>
+                                    <option value="Nombre de categoria 2">Nombre de categoría 2</option>
+                                    <option value="Nombre de categoria 3">Nombre de categoría 3</option>
+                                    <option value="Nombre de categoria 4">Nombre de categoría 4</option>
+                                    <option value="Nombre de categoria 5">Nombre de categoría 5</option>
+                                    <option value="Nombre de categoria 6">Nombre de categoría 6</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10 pull-right">
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-w-m btn-success" ng-click="vm.archive();"><i class="fa fa-check"></i> Archivar</button>
+                                    <button type="button" class="btn btn-outline btn-success"><i class="fa fa-ban"></i> Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <script>
+
+                        
+                        $(function(){
+                            $(".select2_demo_2").select2();
+                        })
+
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
