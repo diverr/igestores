@@ -29,17 +29,20 @@ function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvi
             url: "/chats",
             templateUrl: "views/common/content.html",
         })
-        
         .state('chats.index', {
             url: "/index",
             templateUrl: "views/chats.html",
             data: { pageTitle: 'Conversaciones' }
         })
-
         .state('chats.view', {
             url: "/view/:id",
             templateUrl: "views/chat_view.html",
             data: { pageTitle: 'Conversaciones' }
+        })
+        .state('chats.archive', {
+            url: "/archive/:id",
+            templateUrl: "views/chat_archive.html",
+            data: { pageTitle: 'Citas' }
         })
 
         .state('meetings', {

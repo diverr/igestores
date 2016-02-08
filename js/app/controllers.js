@@ -364,14 +364,15 @@ function MeetingsCtrl($scope, $timeout, Meetings, Clients) {
     }
 }
 
-function MeetingsArchiveCtrl(Meetings, $stateParams) {
+function ChatsArchiveCtrl(Chats, $stateParams) {
     var vm = this;
     vm.form = {};
     var id = $stateParams.id;
     
-    // cogemos los datos de la cita
-    Meetings.get(id, function(data) {
+    // cogemos los datos del chat
+    Chats.get(id, function(data) {
         vm.form = data;
+        console.log(data);
     })
 }
 
@@ -410,7 +411,7 @@ angular
     .controller('MainCtrl', MainCtrl)
     .controller('CalendarCtrl', CalendarCtrl)
     .controller('MeetingsCtrl', MeetingsCtrl)
-    .controller('MeetingsArchiveCtrl', MeetingsArchiveCtrl)
     .controller('ChatsCtrl', ChatsCtrl)
-    .controller('ChatViewCtrl', ChatViewCtrl);
+    .controller('ChatViewCtrl', ChatViewCtrl)
+    .controller('ChatsArchiveCtrl', ChatsArchiveCtrl);
 
