@@ -19,7 +19,7 @@ body.mini-navbar .navbar-default .nav > li > a {
 .responsive {
     display: none;
 }
-@media(max-width: 800px) {
+@media(max-width: 1024px) {
     .logo-column {
         display: none;
     }    
