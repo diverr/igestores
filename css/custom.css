@@ -45,9 +45,11 @@ body.mini-navbar .navbar-default .nav > li > a {
 /* BOTONES */
 .btn-morado {
     background-color: #688EBD;
+    border-color: #688EBD;
 }
 .btn-gris {
     background-color: #6E757F;
+    border-color: #688EBD;
 }
 
 /* BAQUETONES DE ESCRITORIO */
@@ -65,4 +67,15 @@ body.mini-navbar .navbar-default .nav > li > a {
 }
 .custom1-bg a, .custom2-bg a, .custom3-bg a{
     color: #fff;
+}
+
+/* COLORES DE TEXTOS */
+.azul1 {
+    color: #2587C8;
+}
+.naranja {
+    color: #F9B062; 
+}
+.rojo {
+    color: red;
 }

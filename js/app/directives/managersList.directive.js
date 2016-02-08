@@ -13,6 +13,18 @@ function managersList() {
                 vm.items = data;
             });
 
+
+            vm.icono = function(index) {
+                if(index % 3 == 0) {
+                    return 'fa fa-check azul1';
+                }
+                if(index % 2 == 0) {
+                    return 'fa fa-clock-o naranja';
+                } else {
+                    return 'fa fa-times rojo';
+                }
+            }
+
         },
         controllerAs: 'vm',
         templateUrl: '/views/templates/managersList.html'

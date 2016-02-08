@@ -1,8 +1,21 @@
 <div class="users-list">
-<div class="chat-user" ng-repeat="item in vm.items">
-        <img class="chat-avatar" src="{{item.photo}}" alt="" >
-        <div class="chat-user-name">
-            <a href="#">{{item.name}}</a>
+    <div class="chat-user" ng-repeat="item in vm.items" ng-init="contador = $index">
+        
+        <div class="">
+            <div class="lg-col-10">
+                <img class="chat-avatar" src="{{item.photo}}" alt="" >
+                <div class="chat-user-name">
+                    <a href="#">{{item.name}}</a>
+                </div>           
+            </div>
+            <div class="lg-col-2">
+                <div class="pull-right" style="margin-top: -25px;">
+                    <i class="{{vm.icono($index)}}"></i>
+                </div>
+            </div>
         </div>
+
+        <span ng-if="contador == 2"></span>
+
     </div>
 </div>
