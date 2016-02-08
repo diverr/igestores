@@ -16,10 +16,19 @@ body {
 body.mini-navbar .navbar-default .nav > li > a {
     font-size: 25px;
 }
+.responsive {
+    display: none;
+}
 @media(max-width: 800px) {
     .logo-column {
         display: none;
     }    
+    .responsive {
+        display: block;
+    }
+    .noresponsive {
+        display: none;
+    }
 }
 
 
@@ -86,12 +95,12 @@ body.mini-navbar .navbar-default .nav > li > a {
 }
 
 /* MENSAJES */
-.message {
+.alert .message {
     background-color: inherit !important;
     padding: 0 !important;
     border: none !important;
 }
-.message a {
+.alert .message a {
     color: #fff;
     text-decoration: underline;
 }
@@ -109,6 +118,12 @@ body.mini-navbar .navbar-default .nav > li > a {
     color: #fff;
     background-color: #4D5258;
     border-color: #4D5258;
+}
+.m-b-md a {
+    text-decoration: underline;
+}
+.navbar-top-links .dropdown-alerts {
+    width: 350px;
 }
 
 /* RESULTADO DE BÚSQUEDAS */
