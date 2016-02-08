@@ -1,4 +1,4 @@
-angular.module('inspinia')
+angular.module('morabanc')
 .service('Helper', helperService);
 
 function helperService() {

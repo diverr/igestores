@@ -1,4 +1,4 @@
-angular.module('inspinia')
+angular.module('morabanc')
 .directive('newMeetingForm', newMeetingForm);
 
 function newMeetingForm() {

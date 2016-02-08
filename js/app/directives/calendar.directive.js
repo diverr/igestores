@@ -1,4 +1,4 @@
-angular.module('inspinia')
+angular.module('morabanc')
 .directive('myCalendar', calendarDirective);
 
 function calendarDirective() {

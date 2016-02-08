@@ -1,7 +1,3 @@
-/**
- * INSPINIA - Responsive Admin Theme
- *
- */
 function config($translateProvider) {
 
     $translateProvider
@@ -68,5 +64,5 @@ function config($translateProvider) {
 }
 
 angular
-    .module('inspinia')
+    .module('morabanc')
     .config(config)

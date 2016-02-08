@@ -1,5 +1,5 @@
 (function () {
-    angular.module('inspinia', [
+    angular.module('morabanc', [
         'ui.router',                    // Routing
         'ui.bootstrap',                 // Ui Bootstrap
         'pascalprecht.translate',       // Angular Translate

@@ -407,7 +407,7 @@ function ChatViewCtrl(Chats, $stateParams) {
 }
 
 angular
-    .module('inspinia')
+    .module('morabanc')
     .controller('MainCtrl', MainCtrl)
     .controller('CalendarCtrl', CalendarCtrl)
     .controller('MeetingsCtrl', MeetingsCtrl)

@@ -89,7 +89,7 @@ function config($stateProvider, $urlRouterProvider, IdleProvider, KeepaliveProvi
 
 }
 angular
-    .module('inspinia')
+    .module('morabanc')
     .config(config)
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;

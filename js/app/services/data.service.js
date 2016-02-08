@@ -1,4 +1,4 @@
-angular.module('inspinia')
+angular.module('morabanc')
 .service('Data', serviceData);
 
 function serviceData($http) {

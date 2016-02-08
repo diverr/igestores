@@ -3,7 +3,7 @@
 describe('Services Test', function () {
 
     beforeEach(function () {
-        module('inspinia');
+        module('morabanc');
     });
 
     describe('Meetings service', function () {

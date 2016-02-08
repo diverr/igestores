@@ -1,40 +1,3 @@
-/**
- * INSPINIA - Responsive Admin Theme
- *
- * Main directives.js file
- * Define directives for used plugin
- *
- *
- * Functions (directives)
- *  - sideNavigation
- *  - iboxTools
- *  - minimalizaSidebar
- *  - vectorMap
- *  - sparkline
- *  - icheck
- *  - ionRangeSlider
- *  - dropZone
- *  - responsiveVideo
- *  - chatSlimScroll
- *  - customValid
- *  - fullScroll
- *  - closeOffCanvas
- *  - clockPicker
- *  - landingScrollspy
- *  - fitHeight
- *  - iboxToolsFullScreen
- *  - slimScroll
- *  - truncate
- *  - touchSpin
- *  - markdownEditor
- *  - resizeable
- *
- */
-
-
-/**
- * pageTitle - Directive for set Page title - mata title
- */
 function pageTitle($rootScope, $timeout) {
     return {
         link: function(scope, element) {
@@ -385,7 +348,7 @@ function customValid(){
                 // You can call a $http method here
                 // Or create custom validation
 
-                var validText = "Inspinia";
+                var validText = "Morabanc";
 
                 if(scope.extras == validText) {
                     c.$setValidity('cvalid', true);
@@ -541,7 +504,7 @@ function markdownEditor() {
  * Pass all functions into module
  */
 angular
-    .module('inspinia')
+    .module('morabanc')
     .directive('pageTitle', pageTitle)
     .directive('sideNavigation', sideNavigation)
     .directive('iboxTools', iboxTools)
