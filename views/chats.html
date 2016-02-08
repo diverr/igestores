@@ -57,10 +57,10 @@
                                             
                                             <th style="width: 40px;" data-sort-ignore="true"></th>
                                             <th >Cliente</th>
-                                            <th data-sort-initial="descending" style="width: 150px;" >Fecha</th>
-                                            <th style="width: 150px;" >Hora</th>
+                                            <th data-sort-initial="descending" style="width: 150px;" data-hide="phone,tablet">Fecha</th>
+                                            <th style="width: 150px;" data-hide="phone,tablet">Hora</th>
                                             <th style="width: 100px;" >Mensajes</th>
-                                            <th style="width: 100px;" >Destacado</th>
+                                            <th style="width: 100px;" data-hide="phone,tablet">Destacado</th>
                                             <th data-sort-ignore="true"></th>
                                         </tr>
                                     </thead>
@@ -74,7 +74,7 @@
                                         <tr ng-repeat="item in vm.chats">
                                             
                                             <td class="client-avatar"><img alt="image" src="{{item.client.photo}}"> </td>
-                                            <td><a class="client-link azul2" ui-sref="chats.view({id: item.id})">{{item.client.name}} {{item.client.lastName}}</a><br/><small>{{item.lastMessage}}</small></td>
+                                            <td><a class="client-link azul2" ui-sref="chats.view({id: item.id})">{{item.client.name}} {{item.client.lastName}}</a><br/><small class="noresponsive">{{item.lastMessage}}</small></td>
                                             <td>{{item.date}}</td>
                                             <td>{{item.time}}</td>
                                             <td align="center">
@@ -87,8 +87,11 @@
                                             </td>
                                             <td>
 
-                                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-edit"></i> Editar</button>
-                                                <button type="button" class="btn btn-outline btn-success" ui-sref="chats.archive({id: item.id})"><i class="fa fa-tasks"></i> Archivar</button>
+                                                <button type="button" class="btn btn-outline btn-success noresponsive"><i class="fa fa-edit"></i> Editar</button>
+                                                <button type="button" class="btn btn-outline btn-success noresponsive" ui-sref="chats.archive({id: item.id})"><i class="fa fa-tasks"></i> Archivar</button>
+
+                                                <button type="button" class="btn btn-outline btn-success responsive"><i class="fa fa-edit"></i> </button>
+                                                <button type="button" class="btn btn-outline btn-success responsive" ui-sref="chats.archive({id: item.id})"><i class="fa fa-tasks"></i> </button>
                                                 
 
                                             </td>

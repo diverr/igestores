@@ -50,9 +50,9 @@
                                             <th style="width: 40px;" data-sort-ignore="true"></th>
                                             <th>Cliente</th>
                                             <th style="width: 150px;" data-sort-initial="descending">Fecha</th>
-                                            <th style="width: 150px;" >Hora</th>
-                                            <th style="" data-sort-ignore="true">Contacto</th>
-                                            <th style="" data-sort-ignore="true"></th>
+                                            <th style="width: 150px;" data-hide="phone,tablet">Hora</th>
+                                            <th style="" data-sort-ignore="true" data-hide="phone,tablet">Contacto</th>
+                                            <th style="" data-sort-ignore="true" data-hide="phone,tablet"></th>
                                             <th data-sort-ignore="true">Asignar</th>
                                             <th data-sort-ignore="true">Chat</th>
                                         </tr>
@@ -74,13 +74,13 @@
                                             <td>{{item.client.contact_address}}</td>
                                             <td>
 
-                                                <button type="button" class="btn btn-w-m btn-success"><i class="fa fa-check"></i> Asignar cita</button>
-                                                
-                                                
+                                                <button type="button" class="btn btn-w-m btn-success noresponsive"><i class="fa fa-check"></i> Asignar cita</button>
+                                                <button type="button" class="btn btn-success responsive"><i class="fa fa-check"></i></button>
 
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-gris"><i class="fa fa-comments-o"></i> Chat</button>
+                                                <button type="button" class="btn btn-gris noresponsive"><i class="fa fa-comments-o"></i> Chat</button>
+                                                <button type="button" class="btn btn-gris responsive"><i class="fa fa-comments-o"></i></button>
                                             </td>
                                         </tr>
 

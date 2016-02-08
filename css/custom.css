@@ -29,6 +29,9 @@ body.mini-navbar .navbar-default .nav > li > a {
     .noresponsive {
         display: none;
     }
+    button.responsive {
+        display: inline-block;
+    }
 }
 
 
